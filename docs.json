@@ -30,6 +30,18 @@
         ]
       },
       {
+        "group": "Onboarding Guide",
+        "pages": [
+          "onboarding/index",
+          "onboarding/pins-and-work",
+          "onboarding/recurring-pins",
+          "onboarding/chat-and-notifications",
+          "onboarding/assets-inventory-locations",
+          "onboarding/projects-incidents-requests",
+          "onboarding/quick-reference"
+        ]
+      },
+      {
         "group": "Daily Work",
         "pages": [
           "core-workflows/create-a-pin",
