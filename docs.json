@@ -9,8 +9,8 @@
   },
   "favicon": "/images/pin-logo.png",
   "logo": {
-    "light": "/images/pin-logo.png",
-    "dark": "/images/pin-logo.png"
+    "light": "/images/pin-logo-light.png",
+    "dark": "/images/pin-logo-dark.png"
   },
   "navigation": {
     "groups": [
