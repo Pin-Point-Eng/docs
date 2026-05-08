@@ -24,6 +24,7 @@
         "group": "Start Here",
         "pages": [
           "index",
+          "getting-started/access-pin",
           "getting-started/overview",
           "getting-started/navigation"
         ]
