@@ -1,0 +1,69 @@
+---
+title: Inventory Management
+description: Track every part, supply, and deployable asset associated with your department.
+---
+
+The Inventory module gives your team a way to track and manage any operational stock associated with your department — from replenishable supplies and spare parts to deployable assets and sub-equipment components. Each department manages its own inventory independently, with no visibility into other departments' stock.
+
+## Creating Inventory Categories
+
+Before creating inventory items, managers must ensure the relevant category exists in the system. Categories organize inventory — for example, Cleaning Supplies, Electrical Parts, or Ride Components.
+
+Navigate to the **Inventory module on the web app** and select the category management option. Once created, the category will appear in the dropdown when adding new inventory items.
+
+## Creating an Inventory Item
+
+Only managers can create inventory items. Navigate to the Inventory module and tap the create button.
+
+**Required:**
+- **Name** — A clear, identifiable name for the item.
+- **Department** — The department this inventory belongs to.
+- **Category** — Must be created first before it appears in the dropdown.
+
+**Optional fields:**
+
+| Field | Details |
+|-------|---------|
+| Minimum Threshold | Triggers an automatic restock Pin when stock falls below this level. |
+| Quantity on Hand | The current stock level when setting up the item. |
+| Max on Hand | The maximum quantity to keep on hand. |
+| Unit | The unit of measurement — each, box, roll, etc. |
+| Cost per Unit | The cost per unit for tracking purposes. |
+| Internal ID | An internal reference number for the item. |
+| Physical Location | Where the item is physically stored on the property. |
+| Supplier | The supplier or vendor for this item. |
+| Equipment | Link this inventory to a specific piece of equipment it supports. |
+
+<Warning>
+  Set the minimum stock threshold carefully. The auto-restock Pin only fires when quantity falls below the minimum — set it too low and the team won't be alerted in time. Calibrate the threshold to leave enough buffer to restock before anything runs out.
+</Warning>
+
+## How Inventory Is Used
+
+### Replenishable Inventory
+Track consumable items like cleaning supplies, maintenance parts, or safety equipment. Set a minimum stock threshold and PIN automatically creates a restock Pin for your department when quantity falls below it — the team is alerted before anything runs out.
+
+### Deployable Inventory
+Track items that move around the property. When removing inventory, log a note indicating where it has been deployed. All deployment notes are stored in the item's notes history, giving you a running record of where things currently are.
+
+### Sub-Equipment Tracking
+Use inventory to document the individual components or parts that make up a larger piece of equipment. Rather than actively tracking quantities, this gives the team a reference for what sub-components exist within an asset.
+
+## What's on an Inventory Page
+
+Item name, category, unit type, cost per unit, supplier, storage location, current quantity, min and max thresholds, linked equipment, related Pins, and notes history.
+
+## Day-to-Day Usage
+
+- Update quantity as items are used or restocked
+- For deployable items, add a note indicating where it has been sent
+- Link an item to a piece of equipment to surface it on the asset page
+- Check linked Pins to see what's being restocked or used in repairs
+
+## Low Stock Alerts
+
+When the quantity of any inventory item falls below its minimum threshold, PIN automatically creates a restock Pin assigned to that item's department — nothing runs out without someone being notified.
+
+<Card title="Location Management" icon="arrow-right" href="/modules/locations">
+  Every space on the property has its own operational page.
+</Card>

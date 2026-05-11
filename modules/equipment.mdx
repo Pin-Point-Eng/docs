@@ -1,0 +1,93 @@
+---
+title: Equipment Management
+description: A digital record of every asset across the property — tied to its exact location on the map.
+---
+
+Every piece of equipment across the property — escalators, HVAC units, kiosks, fire extinguishers, ride components, and more — has a digital record in PIN, tied to its exact location on the map. Equipment pages give your team a single place to track condition, store documents, link parts, and view the full operational history of every asset.
+
+## Creating Equipment Types
+
+Before creating equipment, managers must ensure the relevant equipment type exists in the system. Equipment types categorize assets — for example, Escalators, HVAC Units, or Restroom Fixtures.
+
+Navigate to the **Equipment module on the web app** and select **Equipment Types**. Once created, the type will appear in the dropdown when adding new equipment.
+
+## Creating Equipment
+
+Only managers can create equipment records. Navigate to the Equipment module and tap the create button.
+
+**Required:**
+- **Name** — A clear, identifiable name for the asset.
+- **Equipment Type** — Must be created first before it appears in the dropdown.
+
+**Optional but strongly recommended:**
+
+| Field | Details |
+|-------|---------|
+| Department | The department responsible for this asset. |
+| Manufacturer | The asset's manufacturer name. |
+| Model | The model number or identifier. |
+| Serial Number | The unique serial number of the asset. |
+| Capital Cost | The original purchase or replacement cost. |
+| Install Date | When the equipment was installed or put into service. |
+| End of Life Date | The expected end of useful life for the asset. |
+| Condition | Excellent, Good, Poor, or Out of Service. |
+| Attachments | SOPs, manuals, warranties, or any other relevant files. |
+
+## Finding Your Equipment
+
+All equipment associated with your department is listed within the Equipment module. Each item shows the asset name, type, current condition, and location on the property map. Use the search bar or filters to find specific equipment quickly.
+
+Equipment is also visible on the map — by default showing your department's equipment, but you can filter by any equipment type across the entire property.
+
+## What's on an Equipment Page
+
+| Tab | What It Contains |
+|-----|-----------------|
+| **Details** | Type, manufacturer, model, serial number, install date, end of life date, department. |
+| **Condition** | Current status: Excellent, Good, Poor, or Out of Service. |
+| **Documents & Attachments** | SOPs, manuals, warranties, inspection reports, and other files — with access control. |
+| **Parts & Inventory** | Linked inventory items with stock levels and supplier information. |
+| **Pins** | Full history of every Pin — active and completed, regular and recurring — building a complete maintenance record over time. |
+| **Notes** | Freeform notes for general observations about the asset, separate from Pin chats. |
+
+## Condition Tracking
+
+<Warning>
+  When a piece of equipment is marked **Out of Service**, it immediately appears in the **Equipment Offline** section of the Overview dashboard for all users in associated departments — alerting management in real time. Keep equipment conditions current so the team and management see issues the moment they happen.
+</Warning>
+
+Any team member can update equipment condition at any time — from the equipment page directly or when completing a linked Pin.
+
+## Preventive Maintenance
+
+Equipment is the natural target for Recurring Pins. Set up any preventive maintenance routine — monthly HVAC service, weekly fire extinguisher checks, quarterly elevator inspections — as a Recurring Pin linked to the asset. Every completed instance is automatically logged to that piece of equipment, building a full PM record you can pull up any time from the asset's Pin history.
+
+## Linking Equipment to a Pin
+
+Equipment can be linked to a Pin in two ways:
+
+1. **When creating a Pin** — toggle on the Link Equipment option and select the asset from the list.
+2. **After creation** — open the Pin, tap the three-dot (⋯) menu, and select Link Equipment.
+
+Once linked, the Pin appears in the equipment's full Pin history, building its maintenance record over time.
+
+## Creating a Pin from Equipment
+
+Create a Pin directly from any equipment page — it automatically links to that equipment and inherits its location on the map, so you do not need to set these manually.
+
+## Uploading Documents to Equipment
+
+Upload SOPs, manuals, warranties, or any file directly to an equipment page. Control who has access when uploading:
+
+- **Public** — visible to everyone on the platform
+- **Specific users** — visible only to selected users
+- **Specific departments** — visible only to selected departments
+
+<CardGroup cols={2}>
+  <Card title="Inventory Management" icon="boxes-stacked" href="/modules/inventory">
+    Track parts, supplies, and operational stock.
+  </Card>
+  <Card title="Recurring Pins" icon="rotate" href="/pins/recurring-pins-checklists">
+    Set up preventive maintenance routines.
+  </Card>
+</CardGroup>

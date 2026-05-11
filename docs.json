@@ -24,9 +24,43 @@
         "group": "Start Here",
         "pages": [
           "index",
-          "getting-started/access-pin",
-          "getting-started/overview",
-          "getting-started/navigation"
+          "getting-started/accessing-pin",
+          "getting-started/what-is-a-pin",
+          "getting-started/roles-permissions"
+        ]
+      },
+      {
+        "group": "Viewing & Navigating",
+        "pages": [
+          "viewing-navigating/overview-dashboard",
+          "viewing-navigating/map-view",
+          "viewing-navigating/list-view-filters-groups"
+        ]
+      },
+      {
+        "group": "Pins",
+        "pages": [
+          "pins/creating-a-pin",
+          "pins/managing-a-pin",
+          "pins/recurring-pins-checklists"
+        ]
+      },
+      {
+        "group": "Communication",
+        "pages": [
+          "communication/chat"
+        ]
+      },
+      {
+        "group": "Modules",
+        "pages": [
+          "modules/equipment",
+          "modules/inventory",
+          "modules/locations",
+          "modules/projects",
+          "modules/incidents",
+          "modules/analytics",
+          "modules/tenant-portal"
         ]
       },
       {
@@ -42,25 +76,15 @@
         ]
       },
       {
-        "group": "Daily Work",
-        "pages": [
-          "core-workflows/create-a-pin",
-          "core-workflows/manage-pins",
-          "core-workflows/map",
-          "core-workflows/chat"
-        ]
-      },
-      {
         "group": "Admin Guides",
         "pages": [
-          "admin/users-and-teams",
-          "admin/equipment-inventory-locations",
-          "admin/analytics"
+          "admin/users-and-teams"
         ]
       },
       {
         "group": "Reference",
         "pages": [
+          "quick-reference/quick-reference-guide",
           "reference/terms",
           "reference/troubleshooting"
         ]

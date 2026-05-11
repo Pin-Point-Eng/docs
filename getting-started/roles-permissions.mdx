@@ -1,0 +1,67 @@
+---
+title: Roles & Permissions
+description: A breakdown of all available role types in PIN and what each one can access.
+---
+
+PIN uses a role-based access system. Your role determines what you can see and do across the platform. Roles are configured by your venue's admin team before your first login — the specific roles active at your venue may vary.
+
+<Info>
+  The roles listed below represent the full set of available role types in PIN. Your venue may use all of them or a subset. Contact your PIN admin team if you are unsure which role you have been assigned.
+</Info>
+
+## Core Roles
+
+<CardGroup cols={2}>
+  <Card title="Manager — All Teams Access" icon="user-tie">
+    For operational leaders who oversee their own teams but also need visibility into activity across the broader property. Can view Pins, assets, locations, and operational data from other departments to support cross-functional coordination and decision making.
+  </Card>
+  <Card title="Manager — Team Only Access" icon="users">
+    For department leaders or in-house third-party vendors who should remain focused on their assigned teams only. Only sees operational activity tied to their assigned teams unless directly added as a follower on a Pin.
+  </Card>
+</CardGroup>
+
+<CardGroup cols={2}>
+  <Card title="User" icon="user">
+    Standard frontline role for day-to-day operational staff. Can create and manage Pins, update statuses, complete tasks, and collaborate within their department's workflows. Notified about Pins assigned to them or Pins they follow, with visibility into all activity within their assigned teams.
+  </Card>
+  <Card title="User — Limited" icon="user-minus">
+    Restricted role for users who should only access work directly relevant to them. Can only view Pins assigned to them, created by them, or Pins they have been added to as followers. No visibility into broader department activity — ideal for vendors, contractors, or temporary staff.
+  </Card>
+</CardGroup>
+
+## Additional Permission Layers
+
+These roles add specific capabilities on top of a base role and are configured by the admin team.
+
+### Location Manager
+
+Designed for users responsible for overseeing specific physical areas or zones across the property. Location Managers are automatically added as followers on every Pin created within their assigned locations — regardless of which department the Pin belongs to — giving them real-time visibility into all operational activity in their area of responsibility.
+
+Users can configure which locations they want automatic follower access to from their user settings.
+
+### Incident Manager
+
+Designed for users responsible for overseeing active security, safety, and medical incidents across the property. Incident Managers have visibility into all active incidents and associated reports regardless of assignment or follower status, along with full access to historical incident records after closure.
+
+<Warning>
+  Only Incident Managers can officially close incidents within the platform. Standard officers and followers can update status and file reports, but cannot close out an incident.
+</Warning>
+
+## Permissions at a Glance
+
+| Permission | Manager — All Teams | Manager — Team Only | User | User — Limited |
+|------------|--------------------|--------------------|------|---------------|
+| Scope | All Teams | Assigned Teams | Assigned Teams | Own Only |
+| Team Pin Notifications | ✓ | ✓ | — | — |
+| Create & Edit Pins | ✓ | ✓ | ✓ | ✓ |
+| Reassign Pins | ✓ | ✓ | — | — |
+| View Equipment | ✓ | ✓ | ✓ | ✓ |
+| Create & Edit Equipment | ✓ | ✓ | — | — |
+| View Inventory | ✓ | ✓ | ✓ | ✓ |
+| Create & Edit Inventory | ✓ | ✓ | — | — |
+| Create & Edit Incidents | ✓ | ✓ | — | — |
+| View Analytics | ✓ | ✓ | — | — |
+
+<Card title="Back to Accessing PIN" icon="arrow-left" href="/getting-started/accessing-pin">
+  Return to download, login, and getting started.
+</Card>
