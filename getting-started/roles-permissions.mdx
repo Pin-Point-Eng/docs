@@ -47,6 +47,32 @@ Designed for users responsible for overseeing active security, safety, and medic
   Only Incident Managers can officially close incidents within the platform. Standard officers and followers can update status and file reports, but cannot close out an incident.
 </Warning>
 
+## Custom Roles
+
+If the default roles do not match your venue's operational structure, admins can create custom roles from scratch.
+
+Go to **Settings > Roles & Permissions > Create Role**.
+
+When building a custom role, configure each permission by turning it on or off.
+
+| Permission area | What it controls |
+|-----------------|------------------|
+| Scope | Whether the user sees all teams, assigned teams, or only their own work. |
+| Team Pin Notifications | Whether the user receives notifications for all Pins assigned to their department. |
+| Pins | Create and edit Pins, reassign Pins, and delete Pins. |
+| Equipment | View, create and edit, or delete equipment. |
+| Inventory | View, create and edit, or delete inventory. |
+| Incidents | View all incidents, create and edit incidents, and close incidents. |
+| Users | Create and edit users or delete users. |
+| Departments | Create and edit departments or delete departments. |
+| Locations | Edit location details. |
+| Analytics | View analytics. |
+| Administration | Send broadcasts and manage administrative settings. |
+
+<Tip>
+  Start with PIN's default roles if you are unsure. You can always create custom roles later as your operating model becomes clearer.
+</Tip>
+
 ## Permissions at a Glance
 
 | Permission | Manager — All Teams | Manager — Team Only | User | User — Limited |
@@ -62,6 +88,11 @@ Designed for users responsible for overseeing active security, safety, and medic
 | Create & Edit Incidents | ✓ | ✓ | — | — |
 | View Analytics | ✓ | ✓ | — | — |
 
-<Card title="Back to Accessing PIN" icon="arrow-left" href="/getting-started/accessing-pin">
-  Return to download, login, and getting started.
-</Card>
+<CardGroup cols={2}>
+  <Card title="Accessing PIN" icon="mobile" href="/getting-started/accessing-pin">
+    Return to download, login, and getting started.
+  </Card>
+  <Card title="Users and Teams" icon="users" href="/admin/users-and-teams">
+    Learn how admins assign roles and teams.
+  </Card>
+</CardGroup>

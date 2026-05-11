@@ -78,7 +78,11 @@
       {
         "group": "Admin Guides",
         "pages": [
-          "admin/users-and-teams"
+          "admin/setup-overview",
+          "admin/map-and-locations",
+          "admin/global-settings",
+          "admin/users-and-teams",
+          "admin/post-launch"
         ]
       },
       {

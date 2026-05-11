@@ -1,42 +1,94 @@
 ---
 title: Users and Teams
-description: Manage people, teams, and access in Pin.
+description: Create departments, invite users, assign roles, and remove access when needed.
 ---
 
-# Users and Teams
+Administrators use Teams and Users to manage who can access PIN and where work should be routed.
 
-Administrators use Users and Teams to manage who can access Pin and what work they belong to.
+Create teams before users. Every user needs at least one team assignment during setup.
+
+## Teams
+
+Teams represent your venue's departments, such as Maintenance, Housekeeping, Security, Guest Services, Engineering, or Operations.
+
+Teams help route work to the right people. A user's team assignment also affects what they can see, depending on their role.
+
+## Create a team
+
+Go to **Settings > Teams > Create Team**.
+
+Required fields:
+
+- **Name** - the department name as it should appear across PIN
+- **Color** - the color used to identify the team's Pins on the property map
+
+A user can belong to more than one team if their responsibilities span multiple departments.
+
+## Manage teams
+
+Admins can:
+
+- Edit team names and colors
+- Add or remove users from teams
+- Deactivate teams when they are no longer needed
+
+Historical data tied to a team is retained when the team is deactivated.
 
 ## Users
 
 Use **Users** to add or manage individual people in your organization.
 
-Common user tasks include:
+Go to **Settings > Users > Create User**.
 
-- Adding a user
-- Updating a user's name or contact details
-- Assigning a role
-- Viewing a user's assigned or created Pins
-- Removing or disabling access when needed
+Required fields:
 
-## Teams
+- **Name** - the user's full name as it should appear across PIN
+- **Email address** - used for login and the welcome email
+- **Role** - controls the user's access level
+- **Team(s)** - the department or departments the user belongs to
 
-Use **Teams** to group people by department, role, or responsibility.
+Phone number is optional. After account creation, users can add a profile photo from account settings.
 
-Teams help route work to the right people. For example, a facilities team may receive maintenance Pins, while a security team may receive incident-related work.
+## Welcome email
+
+When a user account is created, PIN automatically sends a welcome email with login instructions. The user activates the account and sets a password from that email.
+
+No manual credential distribution is required from the admin side.
+
+## Edit a user
+
+Go to **Settings > Users**, select the user, then choose **Edit**.
+
+Admins can:
+
+- Change a user's role when responsibilities change
+- Add or remove team assignments
+- Update contact information or account details
+
+## Delete or deactivate a user
+
+When someone leaves or no longer needs access, use the user delete action to deactivate their account.
+
+Deleted users can no longer log in, but historical data remains in PIN for reporting and reference. Pins they created, completed work, chat messages, logs, and other operational records are retained.
+
+<Info>
+  If the deleted user was assigned to open Pins, those Pins remain in the system and become unassigned. Review unassigned work after removing a user.
+</Info>
 
 ## Roles and permissions
 
-Roles control what a user can see and do. If someone cannot see a section, create an item, edit a Pin, view analytics, or manage settings, their role may not include that permission.
+Roles control what a user can see and do. Confirm roles before creating users.
 
-Use **Settings** and **Roles & Permissions** to review or adjust access if your account has permission to do so.
+Use **Settings > Roles & Permissions** to review or adjust access if your account has permission to do so.
 
 ## Best practices
 
-Keep teams aligned with how work is actually assigned.
+- Keep teams aligned with how work is actually assigned.
+- Give users only the access they need.
+- Review roles when someone changes responsibilities.
+- Remove access promptly when a user no longer needs PIN.
+- After deleting a user, review unassigned Pins and active project followers.
 
-Give users only the access they need.
-
-Review roles when someone changes responsibilities.
-
-Remove access promptly when a user no longer needs Pin.
+<Card title="Roles & Permissions" icon="shield" href="/getting-started/roles-permissions">
+  Compare default roles and permission areas.
+</Card>
