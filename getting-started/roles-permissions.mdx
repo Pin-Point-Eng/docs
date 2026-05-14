@@ -1,59 +1,54 @@
 ---
 title: Roles & Permissions
-description: A breakdown of all available role types in PIN and what each one can access.
+description: Understand PIN's default roles, recommended additional roles, situational roles, and custom permissions.
 ---
 
-PIN uses a role-based access system. Your role determines what you can see and do across the platform. Roles are configured by your venue's admin team before your first login — the specific roles active at your venue may vary.
+PIN uses a role-based access system. A user's role determines what they can see and do across the platform.
 
-<Info>
-  The roles listed below represent the full set of available role types in PIN. Your venue may use all of them or a subset. Contact your PIN admin team if you are unsure which role you have been assigned.
-</Info>
+Every new PIN account comes with three default roles that are pre-loaded and ready to use. Admins can assign these immediately or create additional custom roles to match the venue's operating model.
 
-## Core Roles
+## Default roles
 
-<CardGroup cols={2}>
-  <Card title="Manager — All Teams Access" icon="user-tie">
-    For operational leaders who oversee their own teams but also need visibility into activity across the broader property. Can view Pins, assets, locations, and operational data from other departments to support cross-functional coordination and decision making.
-  </Card>
-  <Card title="Manager — Team Only Access" icon="users">
-    For department leaders or in-house third-party vendors who should remain focused on their assigned teams only. Only sees operational activity tied to their assigned teams unless directly added as a follower on a Pin.
-  </Card>
-</CardGroup>
+These roles are pre-loaded into every PIN account and cannot be removed.
 
-<CardGroup cols={2}>
-  <Card title="User" icon="user">
-    Standard frontline role for day-to-day operational staff. Can create and manage Pins, update statuses, complete tasks, and collaborate within their department's workflows. Notified about Pins assigned to them or Pins they follow, with visibility into all activity within their assigned teams.
-  </Card>
-  <Card title="User — Limited" icon="user-minus">
-    Restricted role for users who should only access work directly relevant to them. Can only view Pins assigned to them, created by them, or Pins they have been added to as followers. No visibility into broader department activity — ideal for vendors, contractors, or temporary staff.
-  </Card>
-</CardGroup>
+| Role | Description |
+|------|-------------|
+| Admin | Full access to everything in PIN, including settings, users, teams, all modules, and all data. This role is locked and cannot be modified or deleted. Assign it only to venue administrators. |
+| Manager | Full visibility across their department. Managers receive all Pins assigned to their department, route and reassign work, oversee operations, access department chats, view analytics, and manage equipment and inventory. Managers can also view Pins, equipment, and inventory across other departments when needed. |
+| User | Standard role for frontline staff. Users can create Pins for any department, manage and complete assigned work, communicate within tasks and with other users, and view their department's Pins, equipment, and inventory. Users receive notifications for Pins assigned to them or Pins they follow. |
 
-## Additional Permission Layers
+## Recommended additional roles
 
-These roles add specific capabilities on top of a base role and are configured by the admin team.
+PIN recommends creating these roles for common large-venue scenarios. They are not pre-loaded; create them from **Settings > Roles & Permissions > Create Role**.
+
+| Role | When to use |
+|------|-------------|
+| User — Limited | For field users who should only see Pins directly assigned to them or Pins where they are a follower. This role is ideal for frontline staff who do not need to see the full department queue. Equipment and Inventory access is the same as the standard User role. |
+| Manager — Team Only | For managers who should be locked to their own department's Pins, Equipment, and Inventory with no ability to view other departments. This is useful for third-party contractors, external vendors, or teams that should not have cross-property visibility. |
+
+## Situational roles
+
+Create these roles only when they match how your venue operates.
 
 ### Location Manager
 
-Designed for users responsible for overseeing specific physical areas or zones across the property. Location Managers are automatically added as followers on every Pin created within their assigned locations — regardless of which department the Pin belongs to — giving them real-time visibility into all operational activity in their area of responsibility.
+Location Managers are responsible for specific physical areas or zones across the property. They are automatically added as followers on every Pin created within their assigned locations, regardless of which department the Pin belongs to.
 
-Users can configure which locations they want automatic follower access to from their user settings.
+This gives them real-time visibility into all operational activity in their area of responsibility.
 
 ### Incident Manager
 
-Designed for users responsible for overseeing active security, safety, and medical incidents across the property. Incident Managers have visibility into all active incidents and associated reports regardless of assignment or follower status, along with full access to historical incident records after closure.
+Incident Managers oversee active security, safety, and medical incidents. They can see all active incidents and associated reports regardless of assignment or follower status, with full access to historical incident records after closure.
 
 <Warning>
-  Only Incident Managers can officially close incidents within the platform. Standard officers and followers can update status and file reports, but cannot close out an incident.
+  Only Incident Managers can officially close incidents within the platform.
 </Warning>
 
-## Custom Roles
+## Custom roles
 
-If the default roles do not match your venue's operational structure, admins can create custom roles from scratch.
+If the default and recommended roles do not match your needs, admins can create custom roles from scratch.
 
-Go to **Settings > Roles & Permissions > Create Role**.
-
-When building a custom role, configure each permission by turning it on or off.
+Go to **Settings > Roles & Permissions > Create Role**, then configure each permission by turning it on or off.
 
 | Permission area | What it controls |
 |-----------------|------------------|
@@ -70,29 +65,14 @@ When building a custom role, configure each permission by turning it on or off.
 | Administration | Send broadcasts and manage administrative settings. |
 
 <Tip>
-  Start with PIN's default roles if you are unsure. You can always create custom roles later as your operating model becomes clearer.
+  Start with PIN's three default roles if you are unsure. You can always create additional roles later as operational needs become clearer.
 </Tip>
 
-## Permissions at a Glance
-
-| Permission | Manager — All Teams | Manager — Team Only | User | User — Limited |
-|------------|--------------------|--------------------|------|---------------|
-| Scope | All Teams | Assigned Teams | Assigned Teams | Own Only |
-| Team Pin Notifications | ✓ | ✓ | — | — |
-| Create & Edit Pins | ✓ | ✓ | ✓ | ✓ |
-| Reassign Pins | ✓ | ✓ | — | — |
-| View Equipment | ✓ | ✓ | ✓ | ✓ |
-| Create & Edit Equipment | ✓ | ✓ | — | — |
-| View Inventory | ✓ | ✓ | ✓ | ✓ |
-| Create & Edit Inventory | ✓ | ✓ | — | — |
-| Create & Edit Incidents | ✓ | ✓ | — | — |
-| View Analytics | ✓ | ✓ | — | — |
-
 <CardGroup cols={2}>
-  <Card title="Accessing PIN" icon="mobile" href="/getting-started/accessing-pin">
-    Return to download, login, and getting started.
-  </Card>
   <Card title="Users and Teams" icon="users" href="/admin/users-and-teams">
     Learn how admins assign roles and teams.
+  </Card>
+  <Card title="Organization Settings" icon="gear" href="/admin/global-settings">
+    Configure broadcast access and other venue-wide settings.
   </Card>
 </CardGroup>
