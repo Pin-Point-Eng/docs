@@ -32,6 +32,7 @@
       {
         "group": "Viewing & Navigating",
         "pages": [
+          "viewing-navigating/index",
           "viewing-navigating/overview-dashboard",
           "viewing-navigating/map-view",
           "viewing-navigating/list-view-filters-groups"
