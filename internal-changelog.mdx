@@ -1,0 +1,87 @@
+---
+title: "Internal Changelog"
+description: "Engineering, security, deployment, and support notes for the Pin team."
+rss: true
+---
+
+# Internal Changelog
+
+This page is public for now, but it is written for operators, support, and the engineering team. Keep customer-facing release notes in the main changelog.
+
+<Update label="May 31, 2026 - Biome and staged checks" tags={["Developer Experience","CI"]} description="Local formatting and linting workflow updates">
+  Linting moved to Biome and prek, and staged formatting hooks were added for local commits.
+
+  This is not customer-facing, but it changes how contributors should expect formatting and lint checks to run locally and in CI.
+</Update>
+
+<Update label="May 31, 2026 - Central mutation error handling" tags={["Support","Web","Mobile"]} description="Support and QA note for failed actions">
+  Web and mobile now use global TanStack Query mutation error toasts for generic action failures.
+
+  QA should expect fewer screen-specific duplicate error messages, and support should see clearer permission-denied copy for failed actions.
+</Update>
+
+<Update label="May 29, 2026 - Security hardening" tags={["Security","Server","Web","Mobile"]} description="Pentest remediation and security follow-up">
+  Security hardening landed for analytics request limits, auth response timing, media upload validation, production validation errors, web logout token revocation, and MappedIn map credential handling.
+
+  Keep public release notes high-level, and track any tenant credential rotation as a separate operational task.
+</Update>
+
+<Update label="May 29, 2026 - Field-user due-soon visibility" tags={["Support","Pins","Permissions"]} description="Overview visibility fix for own-scope users">
+  The overview ownership filter now includes personally visible Pins for own-scope users.
+
+  This should resolve cases where field users had no due-soon Pins even when assigned to or following relevant work.
+</Update>
+
+<Update label="May 28, 2026 - Tenant-local daily summary dispatch" tags={["Jobs","Notifications","Analytics"]} description="Deployment verification for daily summary jobs">
+  Daily summary compute and email jobs now tick hourly and dispatch only for tenants whose local hour matches the job target.
+
+  After deploy, verify the existing scheduler keys use the hourly pattern and that non-Eastern tenants receive summaries for the correct local date.
+</Update>
+
+<Update label="May 28, 2026 - Recurring checklist propagation" tags={["QA","Recurring Pins","Web","Mobile"]} description="Recurring checklist regression checks">
+  Recurring series checklist editing now has direct web and mobile paths, and web checklist propagation sends the selected update scope through the bulk checklist endpoint.
+
+  Regression checks should include future-start series, this-instance edits, and this-and-future edits.
+</Update>
+
+<Update label="May 27, 2026 - RLS tenant isolation" tags={["Database","Security","Deployment"]} description="Postgres row-level security enforcement">
+  Base Postgres row-level security enforcement was promoted to main, including a read-only `yarn db:check-rls` command and automated checks for tenant models.
+
+  Branch-aware deploy routing for `main` and `staging` also moved into the shared deploy workflow.
+</Update>
+
+<Update label="May 27, 2026 - WorkOS SSO rollout" tags={["Authentication","Deployment","Tenant Management"]} description="SSO operational notes">
+  SSO support includes new server routes, tenant/admin settings, user bypass handling, contracts, query keys, audit events, and database migrations.
+
+  The app remains bootable when SSO environment variables are unset, but SSO flows report service-unavailable style errors until configured.
+</Update>
+
+<Update label="May 27, 2026 - Managed Building migration" tags={["Database","Locations","Tenant Management"]} description="Location Building migration checks">
+  The location building migration creates managed Building rows, links existing locations, and removes the legacy freeform building column.
+
+  After deployment, spot-check tenant management for high-volume tenants and confirm active location counts look correct before editing or deleting Building records.
+</Update>
+
+<Update label="May 27, 2026 - Create/edit permission split" tags={["Permissions","Database","Web","Mobile"]} description="RBAC migration note">
+  Module write permissions were split into explicit create and edit permissions across contracts, server route guards, web, mobile, seed data, and role storage.
+
+  The migration converts old stored write permissions into the new create/edit pair.
+</Update>
+
+<Update label="May 27, 2026 - Mobile media removal behavior" tags={["Mobile","Media","Support"]} description="Attachment removal no longer eager-deletes Media rows">
+  Mobile attachment removal now disconnects media from the parent record without eagerly soft-deleting the Media row first.
+
+  This avoids validation failures caused by tenant-scoped soft-delete filters. Orphaned media cleanup remains a separate concern.
+</Update>
+
+<Update label="May 24, 2026 - Department Pin chat auto-join" tags={["Chat","Roles","Support"]} description="Dedicated role flag for department Pin chat membership">
+  Department Pin chat auto-membership now uses a dedicated `autoJoinDepartmentPinChats` role flag instead of broad department membership or notification preferences.
+
+  User and role changes resync affected Pin chats.
+</Update>
+
+<Update label="May 24, 2026 - Mobile map hit testing" tags={["Mobile","Locations","QA"]} description="Mappedin location-selection QA note">
+  Mobile location selection now falls back to Mappedin coordinate lookup when the tap payload does not include a space.
+
+  Regression checks should include tapping directly on the current-location indicator.
+</Update>

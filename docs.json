@@ -17,7 +17,8 @@
       {
         "group": "Updates",
         "pages": [
-          "changelog"
+          "changelog",
+          "internal-changelog"
         ]
       },
       {

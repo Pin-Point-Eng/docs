@@ -8,6 +8,96 @@ rss: true
 
 Follow this page for major Pin updates, new workflows, and important changes that affect how your team uses the app.
 
+<Update label="May 31, 2026 - Recurring Pin attachments" tags={["Web","Recurring Pins"]} description="Add media to recurring Pin creation">
+  Recurring Pins created from the web dashboard can now include images, videos, and PDFs at creation time.
+
+  Uploads use the same attachment flow as regular Pin creation and prevent submission while media is still uploading.
+</Update>
+
+<Update label="May 31, 2026 - Equipment status in Pin creation" tags={["Web","Mobile","Pins","Equipment"]} description="Change linked equipment status while creating a Pin">
+  Users can now change linked equipment status while creating a Pin on web or mobile.
+
+  This keeps equipment condition updates attached to the work being reported, without needing a separate trip to the equipment record.
+</Update>
+
+<Update label="May 31, 2026 - Clearer action errors" tags={["Web","Mobile"]} description="Improved feedback when actions fail">
+  Web and mobile now show clearer default messages when an action fails, including permission-related failures.
+
+  Failed saves, uploads, and edits should now be easier to understand without each screen needing its own custom error message.
+</Update>
+
+<Update label="May 31, 2026 - Roles and permissions cleanup" tags={["Web","Roles","Permissions"]} description="More precise access controls and a cleaner permissions view">
+  Role management now distinguishes between creating new records and editing existing records.
+
+  The permissions detail view has also been streamlined so admins can scan role access more easily.
+</Update>
+
+<Update label="May 29, 2026 - Pin group creation" tags={["Web","Pins"]} description="Create Pin groups from the groups page">
+  Pin groups can now be created directly from the Pin Groups page, making it faster to organize related work without leaving the group list.
+</Update>
+
+<Update label="May 29, 2026 - Due-soon Pins for field users" tags={["Web","Mobile","Pins"]} description="More accurate due-soon visibility">
+  The overview due-soon feed now correctly includes Pins that field users can see through assigned, followed, or created-by access.
+</Update>
+
+<Update label="May 28, 2026 - Recurring series checklist editing" tags={["Web","Mobile","Recurring Pins","Checklists"]} description="Edit recurring series checklists directly">
+  Recurring series checklists can now be edited directly on web and mobile.
+
+  This includes future-start series that have not generated their first instance yet.
+</Update>
+
+<Update label="May 28, 2026 - Tenant-local daily summaries" tags={["Analytics","Notifications"]} description="Daily summaries now follow each tenant's timezone">
+  Daily summaries now run according to each tenant's local timezone, so recap data lines up with the correct local business day.
+</Update>
+
+<Update label="May 27, 2026 - Editable recurring series clones" tags={["Web","Recurring Pins"]} description="Adjust recurring series details before cloning">
+  Cloned recurring series can now be adjusted before creation, including assignment, location, equipment, description, checklist, and form-field details.
+</Update>
+
+<Update label="May 27, 2026 - Recurring title and description scope" tags={["Web","Recurring Pins"]} description="Choose how recurring title and description updates apply">
+  Editing a recurring Pin title or description now follows the same scoped update flow as other recurring changes.
+
+  Users can choose whether to update only one instance or future instances too.
+</Update>
+
+<Update label="May 27, 2026 - Inventory quantity notes" tags={["Inventory"]} description="Inventory notes show quantity changes">
+  Inventory notes now include explicit quantity changes for restocks and usage, making the notes feed easier to understand without opening the audit log.
+</Update>
+
+<Update label="May 27, 2026 - Clear Pin due dates" tags={["Web","Pins"]} description="Remove an existing Pin due date">
+  Web users can now remove an existing due date from a Pin, including recurring Pins that use scoped update flows.
+</Update>
+
+<Update label="May 27, 2026 - Resolve language" tags={["Web","Mobile","Pins"]} description="Pin lifecycle language now uses Resolve and Resolved">
+  Pin lifecycle language now consistently uses "Resolve" and "Resolved" across web and mobile, aligning the UI with the active resolve workflow.
+</Update>
+
+<Update label="May 27, 2026 - SSO support" tags={["Web","Mobile","Authentication"]} description="WorkOS SSO support across Pin">
+  Pin now supports WorkOS SSO flows across web, mobile, tenant management, and tenant/user settings.
+
+  Admins can configure tenant-level SSO and user SSO bypass controls.
+</Update>
+
+<Update label="May 27, 2026 - Managed Buildings" tags={["Locations","Tenant Management"]} description="Managed Building records for locations">
+  Locations now use managed Building records instead of freeform building text.
+
+  Tenant management includes controls for Buildings, and existing location building values were migrated into managed records.
+</Update>
+
+<Update label="May 27, 2026 - Analytics improvements" tags={["Web","Analytics"]} description="Improved analytics date filtering and platform visualization">
+  Pin analytics now include an improved date-range picker and a clearer creation-platform visualization.
+</Update>
+
+<Update label="May 24, 2026 - Department Pin chat membership" tags={["Chat","Roles","Pins"]} description="More precise Pin chat auto-membership">
+  Department Pin chat membership now uses an explicit role setting separate from department notifications.
+
+  This gives admins more precise control over who is auto-added to Pin chats.
+</Update>
+
+<Update label="May 24, 2026 - Mobile map selection fix" tags={["Mobile","Locations"]} description="Better location selection when tapping the blue dot">
+  Mobile map taps now resolve the underlying location even when the current-location blue dot captures the tap.
+</Update>
+
 <Update label="May 8, 2026" tags={["Help Center"]} description="Help center launched">
   The Pin help center is now live at [docs.pin.works](https://docs.pin.works).
 
