@@ -8,10 +8,21 @@ rss: true
 
 Follow this page for major Pin updates, new workflows, and important changes that affect how your team uses the app.
 
+
 <Update label="June 1, 2026" tags={["Web","Mobile","Pins"]} description="Department-scoped Pin groups">
   Pin group browse surfaces now filter by department. The web Groups page, the "Groups only" chip, the mobile group filter, and the mobile Pins-tab count badge all show only groups containing Pins you can see.
 
   Empty groups still appear for everyone so newly created groups stay visible, and admins with full access continue to see every group. Add-pin selectors are unchanged, so you can still add a Pin to any group regardless of department.
+
+<Update label="June 1, 2026" tags={["Web","Pins","Incidents"]} description="Easier follower management">
+  Adding and removing [followers](/pins/managing-a-pin#followers) on Pins and [Incidents](/modules/incidents) from the web dashboard is now much faster.
+
+  - Follower chips show an `×` on hover with a confirmation prompt, so you can remove a follower directly from the followers list without opening the picker.
+  - The Select Followers picker now auto-expands departments that already contain followers, shows an "N selected" badge on each department, and displays a running total of selected followers.
+  - Searching expands all departments so you can find people across the org without clicking through each one.
+  - Incident followers now match the same chip styling as Pin followers for a consistent look.
+
+  Pin follower removals still follow the recurring-pin update scope prompt, and incident follower removal respects the `incidents.edit` permission.
 </Update>
 
 <Update label="May 31, 2026" tags={["Web","Recurring Pins"]} description="Recurring Pin attachments">
