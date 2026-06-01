@@ -9,10 +9,22 @@ rss: true
 Follow this page for major Pin updates, new workflows, and important changes that affect how your team uses the app.
 
 
+<Update label="June 1, 2026" tags={["Web","Projects","Roles","Permissions"]} description="Project permissions">
+  [Projects](/modules/projects) now have a full set of [role-based permissions](/getting-started/roles-permissions), matching how Incidents are gated.
+
+  - **View All** — see every project. Without it, users see only the projects they follow.
+  - **Create**, **Edit**, and **Delete** — gate who can add new projects, change project details, manage followers and assignments, and remove projects.
+
+  Create, edit, and delete actions in the Projects UI are hidden for users who lack the matching permission.
+
+  **Action required:** these permissions start off for every role. Admins need to grant the appropriate Projects permissions per role before users can create, edit, or delete projects again. Mobile uses the same permissions, so grant access there as well.
+</Update>
+
 <Update label="June 1, 2026" tags={["Web","Mobile","Pins"]} description="Department-scoped Pin groups">
   Pin group browse surfaces now filter by department. The web Groups page, the "Groups only" chip, the mobile group filter, and the mobile Pins-tab count badge all show only groups containing Pins you can see.
 
   Empty groups still appear for everyone so newly created groups stay visible, and admins with full access continue to see every group. Add-pin selectors are unchanged, so you can still add a Pin to any group regardless of department.
+</Update>
 
 <Update label="June 1, 2026" tags={["Web","Pins","Incidents"]} description="Easier follower management">
   Adding and removing [followers](/pins/managing-a-pin#followers) on Pins and [Incidents](/modules/incidents) from the web dashboard is now much faster.
