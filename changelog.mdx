@@ -9,6 +9,16 @@ rss: true
 Follow this page for major Pin updates, new workflows, and important changes that affect how your team uses the app.
 
 
+<Update label="June 2, 2026" tags={["Mobile","Notifications"]} description="Push notifications follow account switches">
+  Mobile push notifications now reliably move with you when you switch accounts on the same device.
+
+  Previously, a device could keep delivering notifications to a previous account after logout — especially when switching between organizations. The app now reassigns the device to your current account on sign-in, so [notifications](/onboarding/chat-and-notifications) go to the right place.
+</Update>
+
+<Update label="June 2, 2026" tags={["Mobile","Pins"]} description="Group badge respects department filters">
+  The Pins-tab group count badge on mobile now reflects any department filters you have selected, so the badge stays in sync with the Pin groups list you actually see.
+</Update>
+
 <Update label="June 2, 2026" tags={["Web","Mobile","Security"]} description="Security and reliability improvements">
   Behind-the-scenes updates this week harden Pin's network handling on web and mobile.
 
@@ -18,6 +28,29 @@ Follow this page for major Pin updates, new workflows, and important changes tha
   - Non-ASCII characters in request headers are now preserved end-to-end, improving support for internationalized data.
 
   No action is required.
+</Update>
+
+<Update label="June 1, 2026" tags={["Web","Mobile","Projects","Roles","Permissions"]} description="Project permissions">
+  Projects now have their own role-based permissions, matching how Incidents work today.
+
+  - **View All** — see every project; without it, users only see projects they follow.
+  - **Create**, **Edit**, **Delete** — gate the matching project actions on web and mobile, including category, follower, document, and linked-Pin changes.
+
+  Admin and System roles automatically receive all four project permissions. For other roles, an admin needs to grant them under **Settings > Roles & Permissions** before users can create, edit, or delete projects. Until then, those actions return a permission error and are hidden in the UI.
+
+  See [Roles and permissions](/getting-started/roles-permissions) for how to update role access.
+</Update>
+
+<Update label="June 1, 2026" tags={["Web","Pins","Incidents"]} description="Followers picker visual polish">
+  The Select Followers dialog now gives department headers clearer visual weight over the users inside them, making groups easier to scan.
+</Update>
+
+<Update label="June 1, 2026" tags={["Web"]} description="Consistent confirmation dialogs">
+  Confirm and delete prompts across the web dashboard now share a single, consistent dialog.
+
+  - Deleting a chat announcement now opens a standard confirmation dialog with a clear description, instead of an in-place hover prompt that could be dismissed by accident.
+  - All confirmations—deleting [Pins](/pins/managing-a-pin), Pin groups, [Incidents](/modules/incidents), projects, equipment types and manufacturers, inventory categories and suppliers, emergency contacts, roles, users, and teams, plus removing followers and disconnecting SSO—now behave the same way, with focus on the action buttons and a loading spinner while the change is saving.
+  - Outside-clicks no longer close a confirmation by accident.
 </Update>
 
 <Update label="June 1, 2026" tags={["Web","Mobile","Pins"]} description="Department-scoped Pin groups">
