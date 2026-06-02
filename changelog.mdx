@@ -9,10 +9,22 @@ rss: true
 Follow this page for major Pin updates, new workflows, and important changes that affect how your team uses the app.
 
 
+<Update label="June 2, 2026" tags={["Web","Mobile","Security"]} description="Security and reliability improvements">
+  Behind-the-scenes updates this week harden Pin's network handling on web and mobile.
+
+  - Stronger protection against prototype-pollution-style payloads on requests that accept structured form data.
+  - Fixed a case where HTTPS traffic could fall back to cleartext when routed through certain proxy configurations.
+  - More resilient file upload progress reporting, so uploads no longer fail on browsers that emit malformed progress events.
+  - Non-ASCII characters in request headers are now preserved end-to-end, improving support for internationalized data.
+
+  No action is required.
+</Update>
+
 <Update label="June 1, 2026" tags={["Web","Mobile","Pins"]} description="Department-scoped Pin groups">
   Pin group browse surfaces now filter by department. The web Groups page, the "Groups only" chip, the mobile group filter, and the mobile Pins-tab count badge all show only groups containing Pins you can see.
 
   Empty groups still appear for everyone so newly created groups stay visible, and admins with full access continue to see every group. Add-pin selectors are unchanged, so you can still add a Pin to any group regardless of department.
+</Update>
 
 <Update label="June 1, 2026" tags={["Web","Pins","Incidents"]} description="Easier follower management">
   Adding and removing [followers](/pins/managing-a-pin#followers) on Pins and [Incidents](/modules/incidents) from the web dashboard is now much faster.
