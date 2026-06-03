@@ -9,6 +9,17 @@ rss: true
 Follow this page for major Pin updates, new workflows, and important changes that affect how your team uses the app.
 
 
+<Update label="June 3, 2026" tags={["Web","Locations","Tenant Portal"]} description="Team-routed QR code generator">
+  A new Pin QR generator replaces the separate property-wide and location QR dialogs with a single tool that routes scanned [requests](/modules/tenant-portal) to the right team.
+
+  - Generate a QR code from the overview or any [location](/modules/locations) page and pick the team (for example, Front Desk or Housekeeping) that should receive submissions.
+  - Optionally lock the code to a specific location so submitters cannot change it after scanning.
+  - The submission form now shows the routed team as read-only context, so requesters can see where their report is going.
+  - QR links are signed, so tampered or outdated links prompt the submitter to scan a freshly generated code.
+
+  The previous tenant-wide "default QR department" setting has been removed — routing is now chosen per QR code at generation time.
+</Update>
+
 <Update label="June 2, 2026" tags={["Mobile","Notifications"]} description="Push notifications follow account switches">
   Mobile push notifications now reliably move with you when you switch accounts on the same device.
 
