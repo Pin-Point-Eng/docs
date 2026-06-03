@@ -7,12 +7,12 @@ The Tenant Portal is a dedicated web link that lets tenants, contractors, or any
 
 ## How It Works
 
-Anyone can submit a request by visiting your venue's PIN portal link or scanning the QR code. Both can be found on the **home screen of the PIN web app**, below the create button — making them easy to share with tenants at any time.
+Anyone can submit a request by visiting your venue's PIN portal link or scanning a QR code. The portal link is on the **home screen of the PIN web app**, below the create button. QR codes are generated from the **Pin QR Generator** (see below).
 
-No account or login is required. The person submitting fills out a short form — title, description, location, and optional photos — and the request is automatically created as a Pin in the system and routed to the appropriate department for triage and resolution.
+No account or login is required. The person submitting fills out a short form — title, description, optional photos, and a location if the QR code does not already specify one — and the request is automatically created as a Pin and routed to the team encoded in the QR code.
 
 <Tip>
-  QR codes work well posted in tenant spaces and back hallways. The portal link can be shared via email, signage, the tenant handbook, or any other channel. The link can be reused indefinitely — no need to refresh or rotate it.
+  QR codes work well posted in tenant spaces and back hallways. The portal link can be shared via email, signage, the tenant handbook, or any other channel. Both the link and QR codes can be reused indefinitely — no need to refresh or rotate them.
 </Tip>
 
 <Frame>
@@ -44,14 +44,27 @@ Admins configure Tenant Portal routing from the venue's global settings.
     />
 </Frame>
 
-## QR Code Options
+## Pin QR Generator
 
-PIN supports both property-wide and location-specific QR codes:
+Use the Pin QR Generator to create signed QR codes that route submissions to a specific team — for example, the front desk, housekeeping, or maintenance — with an optional pre-set location.
 
-- **Property-wide QR code** — available on the web app home screen. The submitter selects their location before sending the request.
-- **Location-specific QR codes** — available from each location page. The location is pre-set automatically when scanned.
+Open it in two places:
 
-Location-specific QR codes are best for tenant spaces because they remove location selection from the submission process and help every request land in the right place.
+- **Create menu in the sidebar** → **Pin QR Generator** for any team and (optionally) any location.
+- **A location's page** in the Locations module → **QR Code** button, which pre-fills that location.
+
+To generate a QR code:
+
+1. Select the **Team** that should receive submissions from this QR code.
+2. Optionally select a **Location**. If set, the location is locked into the submission and the submitter cannot change it.
+3. Select **Generate**.
+4. **Copy the link** to share digitally, or **Download PNG** to print a poster that includes the location name, team, and venue.
+
+<Tip>
+  Generate a separate QR code for each printed location — for example, one per guest room, conference room, or restroom — and select the team that owns that space. The submitter never has to choose, so requests always land with the right team.
+</Tip>
+
+Every QR code is cryptographically signed. If the team or location encoded in the link is changed or removed later, the QR code stops working and the submitter is asked to scan an updated code — regenerate it from the Pin QR Generator to replace it.
 
 ## Email Updates to the Submitter
 
