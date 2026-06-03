@@ -33,7 +33,18 @@ Open it in two places:
 - **Create menu** in the sidebar → **Pin QR Generator** for any team and (optionally) any location.
 - A location's page in the **Locations** module → **QR Code** button, which pre-fills that location.
 
-Each QR code is signed to the team (and optional location) chosen at the time of generation. Different codes across the property can route to different teams, so submissions land with the right department automatically — there is no venue-wide default.
+To generate a QR code:
+
+1. Select the **Team** that should receive submissions from this QR code.
+2. Optionally select a **Location**. If set, the location is locked into the submission and the submitter cannot change it.
+3. Select **Generate**.
+4. **Copy the link** to share digitally, or **Download PNG** to print a poster that includes the location name, team, and venue.
+
+<Tip>
+  Generate a separate QR code for each printed location — for example, one per guest room, conference room, or restroom — and select the team that owns that space. The submitter never has to choose, so requests always land with the right team.
+</Tip>
+
+Each QR code is cryptographically signed to the team and optional location chosen when it is generated, so different codes across the property route to different teams automatically — there is no venue-wide default. If the team or location encoded in a code is later changed or removed, the code stops working and the submitter is asked to scan an updated one; regenerate it from the Pin QR Generator to replace it.
 
 ## Routing
 
@@ -64,28 +75,6 @@ Every request is logged the moment it is submitted — nothing gets lost.
     style={{ width: "100%", display: "block" }}
   />
 </Frame>
-
-## Pin QR Generator
-
-Use the Pin QR Generator to create signed QR codes that route submissions to a specific team — for example, the front desk, housekeeping, or maintenance — with an optional pre-set location.
-
-Open it in two places:
-
-- **Create menu in the sidebar** → **Pin QR Generator** for any team and (optionally) any location.
-- **A location's page** in the Locations module → **QR Code** button, which pre-fills that location.
-
-To generate a QR code:
-
-1. Select the **Team** that should receive submissions from this QR code.
-2. Optionally select a **Location**. If set, the location is locked into the submission and the submitter cannot change it.
-3. Select **Generate**.
-4. **Copy the link** to share digitally, or **Download PNG** to print a poster that includes the location name, team, and venue.
-
-<Tip>
-  Generate a separate QR code for each printed location — for example, one per guest room, conference room, or restroom — and select the team that owns that space. The submitter never has to choose, so requests always land with the right team.
-</Tip>
-
-Every QR code is cryptographically signed. If the team or location encoded in the link is changed or removed later, the QR code stops working and the submitter is asked to scan an updated code — regenerate it from the Pin QR Generator to replace it.
 
 ## Email Updates to the Submitter
 
