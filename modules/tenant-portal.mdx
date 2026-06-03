@@ -9,39 +9,67 @@ The Tenant Portal is a dedicated web link that lets tenants, contractors, or any
 
 Anyone can submit a request by visiting your venue's PIN portal link or scanning a QR code. The portal link is on the **home screen of the PIN web app**, below the create button. QR codes are generated from the **Pin QR Generator** (see below).
 
-No account or login is required. The person submitting fills out a short form — title, description, optional photos, and a location if the QR code does not already specify one — and the request is automatically created as a Pin and routed to the team encoded in the QR code.
+No account or login is required. The person submitting fills out a short form — title, description, optional photos, and a location if the QR code does not already include one — and the request is created as a Pin and routed to the team set on the QR code or portal link. 
 
 <Tip>
   QR codes work well posted in tenant spaces and back hallways. The portal link can be shared via email, signage, the tenant handbook, or any other channel. Both the link and QR codes can be reused indefinitely — no need to refresh or rotate them.
 </Tip>
 
 <Frame>
-    <img
-      src="/images/IMG_1421-landscape.png"
-      alt="How It Works screen in PIN"
-      title="How It Works screen in PIN"
-      style={{ width: "100%", display: "block" }}
-    />
+  <img
+    src="/images/IMG_1421-landscape.png"
+    alt="How It Works screen in PIN"
+    title="How It Works screen in PIN"
+    style={{ width: "100%", display: "block" }}
+  />
+
+  <img
+    src="/images/IMG_1421-landscape.png"
+    alt="How It Works screen in PIN"
+    title="How It Works screen in PIN"
+    style={{ width: "100%", display: "block" }}
+  />
 </Frame>
 
-## Routing Options
+## Pin QR Generator
 
-Your venue can configure tenant Pins to route in two ways:
+Use the **Pin QR Generator** to create signed QR codes that route submissions to a specific team — for example, the front desk, housekeeping, or maintenance — with an optional pre-set location.
 
-- **Triage first** — Pins go to a single triage department which then routes to the correct team
-- **Direct routing** — Pins go directly to the intended department
+Open it in two places:
 
-Either way, every request is logged the moment it is submitted — nothing gets lost.
+- **Create menu** in the sidebar → **Pin QR Generator** for any team and (optionally) any location.
+- A location's page in the **Locations** module → **QR Code** button, which pre-fills that location.
 
-Admins configure Tenant Portal routing from the venue's global settings.
+Each QR code is signed to the team (and optional location) chosen at the time of generation. Different codes across the property can route to different teams, so submissions land with the right department automatically — there is no venue-wide default.
+
+## Routing
+
+Routing is set **per QR code**, not at the organization level. When someone generates a QR code, they pick the team that should receive submissions from that specific code:
+
+- A code posted in a tenant suite can route to the front desk.
+- A code on a piece of equipment can route to maintenance.
+- A code in a bathroom can route to housekeeping.
+
+The portal link on the web app home screen routes to the team configured for the venue's default portal submission flow.
+
+## QR Code Options
+
+PIN supports both property-wide and location-specific QR codes:
+
+- **Property-wide QR code** — available on the web app home screen. The submitter selects their location before sending the request.
+- **Location-specific QR codes** — available from each location page. The location is pre-set automatically when scanned.
+
+Location-specific QR codes are best for tenant spaces because they remove location selection from the submission process and help every request land in the right place.
+
+Every request is logged the moment it is submitted — nothing gets lost.
 
 <Frame>
-    <img
-      src="/images/IMG_1407-landscape.png"
-      alt="Routing Options screen in PIN"
-      title="Routing Options screen in PIN"
-      style={{ width: "100%", display: "block" }}
-    />
+  <img
+    src="/images/IMG_1407-landscape.png"
+    alt="Routing Options screen in PIN"
+    title="Routing Options screen in PIN"
+    style={{ width: "100%", display: "block" }}
+  />
 </Frame>
 
 ## Pin QR Generator
@@ -68,7 +96,9 @@ Every QR code is cryptographically signed. If the team or location encoded in th
 
 ## Email Updates to the Submitter
 
-After submitting a request, the tenant automatically receives email notifications as the Pin's status changes — keeping them informed from intake through completion without anyone on the team having to chase them down.
+When filling out the form, the submitter can opt in to email updates. If they opt in, they automatically receive emails as the Pin's status changes — keeping them informed from intake through completion without anyone on the team having to chase them down.
+
+Email updates are the submitter's choice at the time of submission.
 
 ## How Tenant Pins Behave
 
