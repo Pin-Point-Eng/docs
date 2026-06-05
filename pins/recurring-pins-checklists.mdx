@@ -7,12 +7,7 @@ Recurring Pins are how PIN automates the routines that run your venue every day 
 
 <div style={{ maxWidth: "380px", margin: "1.5rem auto" }}>
   <Frame>
-    <img
-      src="/images/IMG_2398-portrait.png"
-      alt="Recurring Pins & Checklists screen in PIN"
-      title="Recurring Pins & Checklists screen in PIN"
-      style={{ width: "100%", display: "block" }}
-    />
+    <img src="/images/IMG_2398-portrait.png" alt="Recurring Pins & Checklists screen in PIN" title="Recurring Pins & Checklists screen in PIN" style={{ width: "100%", display: "block" }} />
   </Frame>
 </div>
 
@@ -39,11 +34,61 @@ Recurring Pins are how PIN automates the routines that run your venue every day 
 - **Monthly HVAC Preventive Maintenance** — Engineering services each unit on schedule and logs the work against the asset.
 - **Quarterly Wayfinding Audit** — Operations reviews every kiosk and signage location for damage, accuracy, and content updates.
 
+## Creating a Recurring Pin
+
+Who can create a recurring Pin depends on your venue's role configuration. Anyone with permission can create one from the **Recurring Pins module** by tapping the create button, or by tapping **\+ Create a recurring Pin instead** from within the standard Pin creation screen.
+
+**Required fields:**
+
+| Field | Details |
+| --- | --- |
+| Series Title | The name of the recurring routine. |
+| Assignee | Choose the department or individual you want receiving the Pin each time it's generated. If a department, a manager will route each instance. |
+| Frequency | How often the Pin generates. |
+| First Occurrence | The date and time the first instance will be generated. |
+| Days to Complete | How many days the assignee has to complete each instance before it becomes overdue. |
+
+**Additional fields:**
+
+| Field | Details |
+| --- | --- |
+| Checklist | Step-by-step items the assignee works through inside each instance. Items can be added or removed at any time. |
+| Equipment | Link the series to a specific piece of equipment so every completed instance is logged to that asset's maintenance history. |
+| Location | Anchor the series to a specific location on the map. Every generated instance inherits this location. |
+| Group | Add the series to a Group to keep related routines organized together. Every future instance inherits the Group automatically. |
+
+### Build a Checklist Instantly with Snap-to-Pin ✨
+
+A recurring Pin's checklist can be built in seconds using **Snap-to-Pin**. From the create screen on mobile, tap the AI sparkle icon ✨ and take a photo of any physical checklist — a printed form, laminated sheet, or wall-mounted inspection card — and PIN's AI will generate the full checklist with all items already filled in. Review, save, and you're done.
+
+<Info>
+  Snap-to-Pin is only available on the **mobile app**.
+</Info>
+
+<div style={{ maxWidth: "380px", margin: "1.5rem auto" }}>
+  <Frame>
+    <img src="/images/IMG_2441-portrait.png" alt="Creating a Recurring Pin screen in PIN" title="Creating a Recurring Pin screen in PIN" style={{ width: "100%", display: "block" }} />
+  </Frame>
+</div>
+
+<Frame>
+  <img
+    src="/images/IMG_1389-landscape.png"
+    alt="Creating a Recurring Pin screen in PIN"
+    title="Creating a Recurring Pin screen in PIN"
+    style={{ width: "100%", display: "block" }}
+  />
+</Frame>
+
+Once saved, the series runs automatically. Each instance generates in the assignee's feed on schedule.
+
 ## How Recurring Pins Appear in Your Feed
 
 - If assigned to your **department**, it will appear in your Team view.
 - If assigned directly to **you**, it will appear in your My Pins feed with a notification.
 - **Followers** added to a recurring series carry through to every instance — add someone once and they are looped in on every occurrence going forward.
+
+When a new instance generates, the assignee is notified just like any other Pin assignment. Followers receive notifications on status changes, chat messages, and completion — same as regular Pins.
 
 ## How to Work a Recurring Pin
 
@@ -54,12 +99,13 @@ Recurring Pins are how PIN automates the routines that run your venue every day 
 
 <div style={{ maxWidth: "380px", margin: "1.5rem auto" }}>
   <Frame>
-    <img
-      src="/images/IMG_1387-portrait.png"
-      alt="How to Work a Recurring Pin screen in PIN"
-      title="How to Work a Recurring Pin screen in PIN"
-      style={{ width: "100%", display: "block" }}
-    />
+    <img src="/images/IMG_1387-portrait.png" alt="How to Work a Recurring Pin screen in PIN" title="How to Work a Recurring Pin screen in PIN" style={{ width: "100%", display: "block" }} />
+  </Frame>
+</div>
+
+<div style={{ maxWidth: "380px", margin: "1.5rem auto" }}>
+  <Frame>
+    <img src="/images/IMG_2401-portrait.png" alt="Long press to create a new Pin from a checklist item screen in PIN" title="Long press to create a new Pin from a checklist item screen in PIN" style={{ width: "100%", display: "block" }} />
   </Frame>
 </div>
 
@@ -69,31 +115,35 @@ Recurring Pins are how PIN automates the routines that run your venue every day 
 
 <div style={{ maxWidth: "380px", margin: "1.5rem auto" }}>
   <Frame>
-    <img
-      src="/images/IMG_2401-portrait.png"
-      alt="How to Work a Recurring Pin screen in PIN"
-      title="How to Work a Recurring Pin screen in PIN"
-      style={{ width: "100%", display: "block" }}
-    />
+    <img src="/images/IMG_1381-portrait.png" alt="How to Work a Recurring Pin screen in PIN" title="How to Work a Recurring Pin screen in PIN" style={{ width: "100%", display: "block" }} />
   </Frame>
 </div>
 
-<div style={{ maxWidth: "380px", margin: "1.5rem auto" }}>
-  <Frame>
-    <img
-      src="/images/IMG_1381-portrait.png"
-      alt="How to Work a Recurring Pin screen in PIN"
-      title="How to Work a Recurring Pin screen in PIN"
-      style={{ width: "100%", display: "block" }}
-    />
-  </Frame>
-</div>
+### Overdue Instances
 
-If a recurring Pin instance is not completed before the next one generates, it becomes overdue and stays in your feed until completed or cancelled. Any instance can be cancelled by anyone — tap cancel and provide a reason.
+If a recurring Pin instance is not completed before the next one generates, it becomes overdue and stays in the assignee's feed **alongside** the newly generated instance until it is completed or cancelled. Overdue instances also appear in the Overdue & Due Soon section of the Overview dashboard.
+
+Any instance can be cancelled by anyone — tap cancel and provide a reason.
+
+### What Happens When an Instance Is Completed
+
+When a recurring Pin instance is marked complete:
+
+- All followers are notified.
+- The instance moves out of active views but stays fully searchable.
+- If the series is linked to a piece of equipment, the completion is logged to that asset's maintenance history.
+- The completion contributes to the series' historical record, viewable from the options tab (see _Viewing Previous Instances_ below).
+- Recurring Pin completions are tracked separately from one-off Pin completions in Analytics, so you can distinguish reactive work from scheduled routines.
 
 ## Managing a Recurring Series
 
 All recurring Pin series can be found in the **Recurring Pins module**. You can also access series options from within any recurring Pin instance by tapping the **purple marker** at the top of the Pin.
+
+<div style={{ maxWidth: "380px", margin: "1.5rem auto" }}>
+  <Frame>
+    <img src="/images/IMG_2439-portrait.png" alt="Managing a Recurring Series screen in PIN" title="Managing a Recurring Series screen in PIN" style={{ width: "100%", display: "block" }} />
+  </Frame>
+</div>
 
 From the options tab you can:
 
@@ -104,20 +154,14 @@ From the options tab you can:
 - **Pause the series** — stops all future instances from generating until unpaused. Any currently open instances remain active and must be completed or cancelled individually.
 - **End the series** — permanently terminates it
 
-<Info>
-  When making any change, you can choose whether it applies to the **full series going forward** or only to **that one specific instance**.
-</Info>
+### Series vs. Instance Edits
 
-<div style={{ maxWidth: "380px", margin: "1.5rem auto" }}>
-  <Frame>
-    <img
-      src="/images/IMG_2439-portrait.png"
-      alt="Managing a Recurring Series screen in PIN"
-      title="Managing a Recurring Series screen in PIN"
-      style={{ width: "100%", display: "block" }}
-    />
-  </Frame>
-</div>
+When making any change to a recurring Pin, you choose whether the change applies to:
+
+- **The full series going forward** — affects every future instance the series generates.
+- **That one specific instance** — affects only the open Pin in front of you, leaving the series and all other instances untouched.
+
+This lets you adjust today's checklist for a one-off situation without altering the routine itself, or update the routine permanently when something about the work changes.
 
 ## Viewing Previous Instances
 
@@ -125,55 +169,9 @@ From within the options tab, view all past completed instances of any recurring 
 
 <div style={{ maxWidth: "380px", margin: "1.5rem auto" }}>
   <Frame>
-    <img
-      src="/images/Screenshot-2026-05-14-at-1.17.32-PM-portrait.png"
-      alt="Viewing Previous Instances screen in PIN"
-      title="Viewing Previous Instances screen in PIN"
-      style={{ width: "100%", display: "block" }}
-    />
+    <img src="/images/Screenshot-2026-05-14-at-1.17.32-PM-portrait.png" alt="Viewing Previous Instances screen in PIN" title="Viewing Previous Instances screen in PIN" style={{ width: "100%", display: "block" }} />
   </Frame>
 </div>
-
-## Creating a Recurring Pin
-
-Any user can create a recurring Pin. Navigate to the **Recurring Pins module** and tap the create button, or tap **\+ Create a recurring Pin instead** from within the standard Pin creation screen.
-
-**Required fields:**
-
-| Field | Details |
-| --- | --- |
-| Series Title | The name of the recurring routine. |
-| Assignee | Choose a department or specific individual. If a department, a manager will route each instance. |
-| Frequency | How often the Pin generates. |
-| First Occurrence | The date the first instance will be generated. |
-
-**Optional fields:** Days to Complete, Checklist, Equipment, Group, Location.
-
-<Tip>
-  You can scan a physical checklist with AI to auto-generate the checklist items when setting up a new series — no manual typing required.
-</Tip>
-
-Once saved, the series runs automatically. Each instance generates in the assignee's feed on schedule.
-
-<div style={{ maxWidth: "380px", margin: "1.5rem auto" }}>
-  <Frame>
-    <img
-      src="/images/IMG_2441-portrait.png"
-      alt="Creating a Recurring Pin screen in PIN"
-      title="Creating a Recurring Pin screen in PIN"
-      style={{ width: "100%", display: "block" }}
-    />
-  </Frame>
-</div>
-
-<Frame>
-    <img
-      src="/images/IMG_1389-landscape.png"
-      alt="Creating a Recurring Pin screen in PIN"
-      title="Creating a Recurring Pin screen in PIN"
-      style={{ width: "100%", display: "block" }}
-    />
-</Frame>
 
 <Card title="Chat & Communication" icon="arrow-right" href="/communication/chat">
   Learn about Pin Chat, direct messages, and team communication.
