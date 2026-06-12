@@ -60,8 +60,8 @@
           "modules/inventory",
           "modules/locations",
           "modules/projects",
-          "modules/documents.mdx",
           "modules/incidents",
+          "modules/documents.mdx",
           "modules/analytics",
           "modules/tenant-portal"
         ]
