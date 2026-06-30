@@ -61,7 +61,8 @@
           "modules/locations",
           "modules/projects",
           "modules/incidents",
-          "modules/documents.mdx",
+          "modules/documents",
+          "modules/procedures",
           "modules/analytics",
           "modules/tenant-portal"
         ]

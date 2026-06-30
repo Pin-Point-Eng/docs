@@ -52,7 +52,7 @@ Who can create a recurring Pin depends on your venue's role configuration. Anyon
 
 | Field | Details |
 | --- | --- |
-| Checklist | Step-by-step items the assignee works through inside each instance. Items can be added or removed at any time. |
+| Checklist | Step-by-step items the assignee works through inside each instance. Choose **New checklist** to build one from scratch, or **Use template** to pull from a saved [procedure](/modules/procedures). Long checklists can be organized into collapsible sections. Items can be added or removed at any time. |
 | Equipment | Link the series to a specific piece of equipment so every completed instance is logged to that asset's maintenance history. |
 | Location | Anchor the series to a specific location on the map. Every generated instance inherits this location. |
 | Group | Add the series to a Group to keep related routines organized together. Every future instance inherits the Group automatically. |
@@ -148,7 +148,7 @@ All recurring Pin series can be found in the **Recurring Pins module**. You can 
 From the options tab you can:
 
 - View the full series details and all past, present, and future instances
-- **Edit the schedule** — change assignee, cadence, checklist, or any other detail
+- **Edit the schedule** — change assignee, cadence, checklist, or any other detail.
 - **Clone the series** — creates an exact duplicate you can rename and configure independently, useful for setting up a similar routine for another zone or department without rebuilding from scratch
 - **Add to or manage a group**
 - **Pause the series** — stops all future instances from generating until unpaused. Any currently open instances remain active and must be completed or cancelled individually.
@@ -162,6 +162,10 @@ When making any change to a recurring Pin, you choose whether the change applies
 - **That one specific instance** — affects only the open Pin in front of you, leaving the series and all other instances untouched.
 
 This lets you adjust today's checklist for a one-off situation without altering the routine itself, or update the routine permanently when something about the work changes.
+
+<Info>
+  If the recurring Pin's checklist was built from a [procedure template](/modules/procedures), edits to that template are **not retroactive** — they only affect instances generated after the edit. To update an existing series, edit the schedule directly.
+</Info>
 
 ## Viewing Previous Instances
 
