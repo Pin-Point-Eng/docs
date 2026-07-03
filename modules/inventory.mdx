@@ -7,12 +7,7 @@ The Inventory module gives your team a way to track and manage any operational s
 
 <div style={{ maxWidth: "380px", margin: "1.5rem auto" }}>
   <Frame>
-    <img
-      src="/images/IMG_2414-portrait.png"
-      alt="Inventory Management screen in PIN"
-      title="Inventory Management screen in PIN"
-      style={{ width: "100%", display: "block" }}
-    />
+    <img src="/images/IMG_2414-portrait.png" alt="Inventory Management screen in PIN" title="Inventory Management screen in PIN" style={{ width: "100%", display: "block" }} />
   </Frame>
 </div>
 
@@ -43,12 +38,18 @@ Only managers can create inventory items. Navigate to the Inventory module and t
 | Cost per Unit | The cost per unit for tracking purposes. |
 | Internal ID | An internal reference number for the item. |
 | Physical Location | Where the item is physically stored on the property. |
-| Supplier | The supplier or vendor for this item. |
+| Vendor | Link this item to a [vendor profile](/modules/vendors) — replaces the old free-text Supplier field. |
 | Equipment | Link this inventory to a specific piece of equipment it supports. |
 
 <Warning>
   Set the minimum stock threshold carefully. The auto-restock Pin only fires when quantity falls below the minimum — set it too low and the team won't be alerted in time. Calibrate the threshold to leave enough buffer to restock before anything runs out.
 </Warning>
+
+## Linking an Inventory Item to a Vendor
+
+Inventory items are linked to a real [vendor profile](/modules/vendors) rather than a free-text supplier name. Each item can be linked to **one** vendor.
+
+From the inventory item you can see which vendor supplies it; from the vendor profile you can see every item sourced from that vendor.
 
 ## How Inventory Is Used
 
@@ -66,7 +67,7 @@ Use inventory to document the individual components or parts that make up a larg
 
 ## What's on an Inventory Page
 
-Item name, category, unit type, cost per unit, supplier, storage location, current quantity, min and max thresholds, linked equipment, related Pins, and notes history.
+Item name, category, unit type, cost per unit, linked [vendor](/modules/vendors), storage location, current quantity, min and max thresholds, linked equipment, related Pins, and notes history.
 
 ## Day-to-Day Usage
 
@@ -81,24 +82,25 @@ When the quantity of any inventory item falls below its minimum threshold, PIN a
 
 <div style={{ maxWidth: "380px", margin: "1.5rem auto" }}>
   <Frame>
-    <img
-      src="/images/IMG_2415-portrait.png"
-      alt="Low Stock Alerts screen in PIN"
-      title="Low Stock Alerts screen in PIN"
-      style={{ width: "100%", display: "block" }}
-    />
+    <img src="/images/IMG_2415-portrait.png" alt="Low Stock Alerts screen in PIN" title="Low Stock Alerts screen in PIN" style={{ width: "100%", display: "block" }} />
   </Frame>
 </div>
 
 <Frame>
-    <img
-      src="/images/IMG_1398-landscape.png"
-      alt="Low Stock Alerts screen in PIN"
-      title="Low Stock Alerts screen in PIN"
-      style={{ width: "100%", display: "block" }}
-    />
+  <img
+    src="/images/IMG_1398-landscape.png"
+    alt="Low Stock Alerts screen in PIN"
+    title="Low Stock Alerts screen in PIN"
+    style={{ width: "100%", display: "block" }}
+  />
 </Frame>
 
-<Card title="Location Management" icon="arrow-right" href="/modules/locations">
-  Every space on the property has its own operational page.
-</Card>
+<CardGroup cols={2}>
+  <Card title="Vendors" icon="handshake" href="/modules/vendors">
+    Track vendors, contractors, and suppliers — with contacts and linked inventory in one profile.
+  </Card>
+
+  <Card title="Location Management" icon="arrow-right" href="/modules/locations">
+    Every space on the property has its own operational page.
+  </Card>
+</CardGroup>

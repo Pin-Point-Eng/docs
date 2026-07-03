@@ -62,6 +62,7 @@
           "modules/projects",
           "modules/incidents",
           "modules/documents",
+          "modules/vendors",
           "modules/procedures",
           "modules/analytics",
           "modules/tenant-portal"
