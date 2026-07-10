@@ -18,12 +18,25 @@ Follow this page for major Pin updates, new workflows, and important changes tha
   Review, edit, and save. Available on both **mobile** and **web**.
 </Update>
 
+<Update label="July 8, 2026" tags={["Locations"]} description="Location Status">
+  Every [**location**](/modules/locations) now has a status that shows its current operational state. Tap the status pill at the top of the location page and pick from:
+
+  - **Operational** (green) — default state; the location is functioning normally.
+  - **Occupied** (blue) — the location is currently in use.
+  - **Needs Attention** (amber) — something at the location requires review or follow-up.
+  - **Out of Service / Closed** (red) — the location is not currently usable, or is closed.
+  - **Vacant** (grey) — the location is empty or unoccupied.
+
+  Any user with access to the location can change its status. Inside the Locations module, filter the list by status to see every location in a given state at a glance.
+</Update>
+
 <Update label="July 3, 2026" tags={["Vendors","Inventory"]} description="Vendors module released">
   A new [**Vendors**](/modules/vendors) module gives your venue one place to track every external party you work with — vendors, contractors, and suppliers.
 
   - Each vendor profile stores basic info, a **Contact List** with multiple contacts (one can be marked **Primary**), and the **inventory items** sourced from that vendor.
   - Inventory items are now linked to a real vendor profile — this **replaces the old free-text Supplier field**. From an inventory item, see which vendor supplies it. From a vendor profile, see every item they supply.
-  - Any user can create, edit, or delete vendors. Vendors are venue-wide.
+  - **Documents** can be uploaded directly to a vendor profile — contracts, W9s, certificates of insurance, price lists, and more. Each document has its own permission layer: **Public** (anyone who can view the vendor) or **Specific access** (selected users and/or departments). Vendor documents also surface in the [Documents module](/modules/documents).
+  - Vendors are **scoped by department** — you can see and edit vendors that belong to your department(s). Admins and All-Teams Managers see every vendor across the venue.
 
   Find Vendors as a top-level module in the sidebar, alongside Documents and Procedures.
 </Update>
