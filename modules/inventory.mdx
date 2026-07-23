@@ -76,6 +76,18 @@ Item name, category, unit type, cost per unit, linked [vendor](/modules/vendors)
 - Link an item to a piece of equipment to surface it on the asset page
 - Check linked Pins to see what's being restocked or used in repairs
 
+## Linking Inventory to a Pin
+
+Inventory items can be linked to a Pin the same way equipment is. Any user with permission to edit inventory can link items and log usage.
+
+- One or more inventory items can be linked to a single Pin, from the Pin's detail page.
+- When linking, the user can log the **quantity used** at that time — or update the quantity later by opening the inventory item's detail page.
+- Any quantity logged on a Pin **automatically reduces the on-hand quantity** in the Inventory module.
+- If the on-hand quantity drops below the minimum threshold as a result, a **restock Pin is automatically created** — the same low-stock behavior described below.
+- All inventory usage from Pins is written to the item's **history**, giving a running record of where and when that item has been used.
+
+Inventory linking works the same way on Recurring Pins as it does on regular Pins.
+
 ## Low Stock Alerts
 
 When the quantity of any inventory item falls below its minimum threshold, PIN automatically creates a restock Pin assigned to that item's department — nothing runs out without someone being notified.

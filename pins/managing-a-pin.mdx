@@ -7,7 +7,9 @@ Opening a Pin gives you everything you need to act on it, communicate about it, 
 
 ## The Info Tab
 
-The Info tab is where you take action on a Pin. From here you can update the status, view the location and get directions, check off checklist items, add photos or attachments, add or edit followers, and link equipment. Managers can also reassign a Pin to a different user or department directly from the Info tab.
+The Info tab is where you take action on a Pin. From here you can update the status, view the location and get directions, check off checklist items, add photos or attachments, add or edit followers, and link equipment or inventory. Managers can also reassign a Pin to a different user or department directly from the Info tab.
+
+Pins scheduled with a **Start Date** show a **Scheduled** badge on the Pin card and inside the Info tab, displaying the date and time work is set to begin.
 
 Documents and files uploaded to a Pin live on the Pin and are accessible to anyone who can view it. They're also surfaced in the central [Documents module](/modules/documents) for quick reference.
 
@@ -46,12 +48,25 @@ Additional followers can be added at any time — either when creating the Pin, 
 From the three-dot (⋯) menu at the top right of any Pin, a manager can:
 
 - **Mark as Priority** — flag the Pin so the assignee knows to treat it urgently. Priority Pins are visually distinct in the list and on the map, and can be filtered to surface the most important work first.
-- **Add or adjust a due date** — give the team a clear deadline. Due dates power overdue tracking, the Overdue & Due Soon section on the Overview, and date-based filters.
+- **Add, edit, or remove a start date** — schedule when the work is meant to begin. Pins with a start date show a **Scheduled** badge with the date and time.
+- **Add, edit, or remove a due date** — give the team a clear deadline. Due dates power overdue tracking, the Overdue & Due Soon section on the Overview, and date-based filters.
 - **Edit the title and description**
-- **Link Equipment** — attach the Pin to a specific piece of equipment so the work is logged against that asset's full service history. Useful for maintenance, inspections, or any task tied to a known piece of equipment on the property.
 - **Add the Pin to a Group or Project**
 - **Convert to Incident** — turn the Pin into a formal incident record when a task also requires structured incident documentation. See [Incidents](/modules/incidents) for details.
 - **Share or export the Pin**
+
+<Info>
+  Equipment and inventory are linked directly from the Pin's detail page (not from the three-dot menu).
+</Info>
+
+## Linking Equipment and Inventory After Creation
+
+Equipment and inventory can be linked to a Pin at any time from the Pin's detail page.
+
+- **Equipment** — link one or more equipment items. When multiple are linked, choose which items have their condition updated when the Pin is completed, and which item's location the Pin inherits. The Pin appears in the full history of every linked equipment item.
+- **Inventory** — link one or more inventory items and log the quantity used, either at link time or later from the inventory item's detail page. Any usage automatically reduces on-hand quantity in the [Inventory module](/modules/inventory) and is written to the item's history. If the on-hand quantity drops below the minimum threshold, a restock Pin is automatically created.
+
+Any user with permission to edit inventory can log inventory used on a Pin.
 
 ## Reassigning a Pin
 
@@ -107,6 +122,19 @@ Within any chat, you have two ways to communicate:
 - **Regular message** — standard conversational chat used for questions or back-and-forth discussion
 - **Update** — a formal, highlighted message (shown in green) used to post important information that all followers should be aware of
 
+## Bulk Actions (Web Only)
+
+On the web app, you can action multiple Pins at once. From the Pins list or from within a group, use the checkbox next to each Pin — or **Select All** — to pick the Pins you want, then choose an action:
+
+- **Assign to a user**
+- **Change status**
+- **Add to or remove from a group**
+- **Delete** (roles with Pin deletion permission only)
+
+Pins from different departments can be selected in the same bulk action. Any user can use bulk actions, but only for actions their role allows. Standard follower and notification rules apply across every selected Pin — the person taking the action becomes a follower, and assignees receive their usual notifications.
+
+Bulk actions are available on web only, not mobile.
+
 ## Completing a Pin
 
 When the work is done, tap **Mark Complete**. You can:
@@ -114,7 +142,7 @@ When the work is done, tap **Mark Complete**. You can:
 - Add completion notes
 - Upload a completion photo
 - Log time spent (hours and minutes)
-- Update the condition of any linked equipment
+- Update the condition of linked equipment — if multiple equipment items are linked, condition updates apply to the items you selected on the Pin
 
 Once marked complete, all followers are notified and the Pin disappears from active views but remains fully searchable.
 

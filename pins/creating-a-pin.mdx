@@ -19,9 +19,20 @@ To create a Pin, tap the **\+** button. You can fill in the Pin's details manual
 
 ## Snap-to-Pin ✨
 
-Snap-to-Pin is PIN's built-in AI feature that makes creating a Pin even faster. Instead of typing out the details manually, simply tap the AI sparkle icon ✨ at the top of the create screen, take a photo of any issue, and PIN's AI will instantly fill in the title, description, and suggested department for you.
+Snap-to-Pin is PIN's built-in AI feature that makes creating a Pin even faster. Tap the AI sparkle icon ✨ at the top of the create screen and give it one of three inputs:
+
+- **Take a photo** — great for issues (a spill, a broken fixture, damaged equipment).
+- **Upload a photo** — pull an image from your device.
+- **Upload a file** — a PDF, doc, or image of a checklist (like a printed inspection sheet).
+
+PIN's AI reads the input and generates the right Pin automatically:
+
+- If the input is a photo of an **issue**, it fills in the title, description, and suggested department for routing.
+- If the input is a photo or file of a **checklist**, it builds a full checklist inside the Pin with the items pulled directly from the source.
 
 The suggested department is informed by each team's **Description** in Organization Settings — the more specific the description, the better the routing.
+
+Snap-to-Pin is available on both the mobile app and the web app.
 
 <Warning>
   Always double-check the AI-generated information for accuracy before submitting.
@@ -39,13 +50,42 @@ The suggested department is informed by each team's **Description** in Organizat
 | Field | What It Does |
 | --- | --- |
 | Followers | Add users who should have visibility and receive updates. The creator and assignee are added automatically. |
+| Start Date | Schedule when work on the Pin is meant to begin. The Pin is still created and visible immediately — the start date is informational, not a delay. Pins with a start date show a **Scheduled** badge with the date and time. |
 | Due Date | Set a deadline for when the task needs to be completed. |
 | Priority | Flag the Pin so the assignee knows to treat it urgently. |
-| Link Equipment | Attach this Pin to a specific piece of equipment to build its maintenance history. |
+| Link Equipment | Attach this Pin to one or more pieces of equipment to build maintenance history. See [Linking equipment and inventory](#linking-equipment-and-inventory) below. |
+| Link Inventory | Attach one or more inventory items to the Pin and log how much was used. See [Linking equipment and inventory](#linking-equipment-and-inventory) below. |
 | Checklist | Add step-by-step items that need to be completed as part of the task. Choose **New checklist** to build one from scratch, or **Use template** to pull from a saved [procedure](/modules/procedures). Long checklists can be organized into collapsible sections. |
 | Group | Add the Pin to a group — a folder for organizing similar Pins together. |
 | Tags | Short keyword labels — like `Leak`, `VIP`, or `Safety` — that make Pins easier to categorize, search, and filter later. Add as many as needed. |
 | Private | Make the Pin visible only to you and the assignee. |
+
+<Info>
+  Start Date does not delay the Pin from appearing in the assignee's feed and does not trigger a notification when the date arrives. It is informational. Recurring Pins use **First Occurrence** instead — start date does not apply there.
+</Info>
+
+## Linking Equipment and Inventory
+
+A Pin can be linked to any number of equipment items and any number of inventory items. Both are linked directly from the Pin's detail page.
+
+### Equipment
+
+Link one or more equipment items to the Pin. When multiple equipment items are linked, choose:
+
+- **Which equipment items have their condition updated** when the Pin is completed.
+- **Which linked equipment's location the Pin inherits.**
+
+The Pin appears in the full Pin history of every equipment item it is linked to.
+
+### Inventory
+
+Link one or more inventory items to the Pin the same way equipment is linked. When linking an inventory item, you can log the quantity used at that time, or update the quantity later from the inventory item's detail page.
+
+- Any quantity logged on the Pin automatically reduces the on-hand quantity in the [Inventory module](/modules/inventory).
+- If the on-hand quantity drops below the minimum threshold as a result, a restock Pin is automatically created.
+- Inventory usage is written to the inventory item's history, giving a running record of where and when that item was used.
+
+Any user with permission to edit inventory can log inventory used on a Pin.
 
 ## Groups
 
@@ -57,7 +97,7 @@ Toggling a Pin to Private makes it visible only to you and the person it is assi
 
 ## Setting the Location
 
-Every Pin needs a location on the map. Tap **Select Location** and either use the blue dot while on property to place the Pin at your exact current position, search for a space by name, or let it auto-populate if you linked equipment.
+Every Pin needs a location on the map. Tap **Select Location** and either use the blue dot while on property to place the Pin at your exact current position, search for a space by name, or let it auto-populate from a linked equipment item. If multiple equipment items are linked, you choose which one's location the Pin inherits.
 
 If you select a location with registered equipment, PIN will ask if you want to link it and optionally update its condition.
 
