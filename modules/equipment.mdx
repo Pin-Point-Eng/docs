@@ -47,6 +47,7 @@ Only managers can create equipment records. Navigate to the Equipment module and
 | Install Date | When the equipment was installed or put into service. |
 | End of Life Date | The expected end of useful life for the asset. |
 | Condition | Excellent, Good, Poor, or Out of Service. |
+| Vendor | Link the equipment to a [vendor](/modules/vendors) profile — the company or contractor that supplied, services, or is otherwise responsible for the asset. |
 | Attachments | SOPs, manuals, warranties, or any other relevant files. |
 
 <div style={{ maxWidth: "380px", margin: "1.5rem auto" }}>
@@ -67,6 +68,7 @@ Equipment is also visible on the map — by default showing your department's eq
 | --- | --- |
 | **Details** | Type, manufacturer, model, serial number, install date, end of life date, department. |
 | **Condition** | Current status: Excellent, Good, Poor, or Out of Service. |
+| **Vendor** | The [vendor](/modules/vendors) linked to this equipment, if one is set. |
 | **Documents & Attachments** | SOPs, manuals, warranties, inspection reports, and other files — with access control. |
 | **Parts & Inventory** | Linked inventory items with stock levels and the [vendor](/modules/vendors) each item is sourced from. |
 | **Pins** | Full history of every Pin — active and completed, regular and recurring — building a complete maintenance record over time. |
@@ -144,6 +146,38 @@ Documents stay attached to the equipment record. Anyone with access can also fin
     style={{ width: "100%", display: "block" }}
   />
 </Frame>
+
+## Linking Equipment to a Vendor
+
+Each piece of equipment can be linked to one [vendor](/modules/vendors) — the company or contractor that supplied, services, or is otherwise responsible for the asset. The link can be created from either the equipment detail page or from the vendor's profile.
+
+On the vendor's profile, every linked piece of equipment appears in a dedicated section alongside the vendor's linked inventory — giving your team one place to see everything sourced from or serviced by that vendor.
+
+Available on both web and mobile.
+
+## QR Codes for Equipment
+
+Generate printable QR codes for any equipment record so field teams can scan and open the asset's detail page instantly.
+
+**Generating codes (web only):**
+
+1. From the Equipment list view on the web app, **bulk-select** the items you want to generate codes for.
+2. Click **Actions** and choose the generate QR codes option.
+3. The codes generate as a printable sheet, ready to be printed and placed on the physical equipment.
+
+Each QR code is tied to the specific equipment record it was generated for and always opens that asset's detail page when scanned.
+
+**Scanning codes (mobile):**
+
+A QR scanner button sits at the top of the mobile app's Overview screen. Tap it to open the camera, scan the code, and jump directly to the equipment's detail page.
+
+## Deleting Equipment
+
+Equipment can be deleted from the web dashboard. When equipment is deleted, it is automatically removed from any Pins it was linked to — the Pins themselves remain intact.
+
+## Exporting Equipment
+
+The full Equipment list view can be exported to a spreadsheet using the **Export** button at the top right. The export includes all relevant fields for every equipment record in the current view.
 
 <CardGroup cols={2}>
   <Card title="Inventory Management" icon="boxes-stacked" href="/modules/inventory">
