@@ -1,0 +1,94 @@
+---
+title: "Team Email Notifications"
+description: "Send automatic emails to your team or external recipients when specific Pin activity happens across the property."
+---
+
+Team email notification rules automatically send emails to anyone you choose — inside or outside the organization — whenever specific Pin activity happens across the property.
+
+Use them to keep external vendors, contractors, tenants, executives, or corporate leadership in the loop on the work that matters to them, without needing to give them a PIN account.
+
+Setup is web-only. Emails send in real time as events happen in PIN.
+
+## Access
+
+Users need the **Team email notifications** permission on their role to view the settings and to create, edit, or delete rules.
+
+This permission is a single toggle under **Administration** in Roles & Permissions. Admins can grant it to any role.
+
+See [Roles & Permissions](/getting-started/roles-permissions) for how to update role access.
+
+## Where to find it
+
+Go to **Settings > Team email notifications** on the PIN web app.
+
+Existing rules are listed with their name and scope (departments, locations, equipment, and inventory filters applied). Users with the permission can create, edit, and delete rules from this page.
+
+## Creating a rule
+
+Click **Create rule** and configure the four parts:
+
+### 1. Rule name
+
+An internal label for the rule, so you can find and manage it later. For example: "Facilities lifecycle updates" or "Vendor completions — Elevators."
+
+### 2. Trigger events
+
+The Pin actions that fire the email. A single rule can fire on one or more of the following:
+
+- A pin is created
+- A pin status changes to in progress
+- A pin status changes to blocked
+- A pin status changes to completed
+- A pin status changes to cancelled
+- A pin is reopened
+
+### 3. Match filters
+
+Narrow which Pins the rule applies to. Filters include:
+
+| Filter | Options |
+| --- | --- |
+| **Department** | Any department, or specific departments |
+| **Location** | Does not affect the rule, or specific locations |
+| **Equipment** | Does not affect the rule, or specific equipment |
+| **Inventory** | Does not affect the rule, or specific inventory items |
+
+All filters combine — the Pin must match every filter you set for the rule to fire.
+
+### 4. Recipients
+
+The email addresses that receive the notification. Anyone can be added, including people outside your organization.
+
+- **To recipients** (required)
+- **CC recipients** (optional)
+
+Press Enter, comma, or space after each email address to add it.
+
+### Optional: Attach Pin PDF
+
+Turn on **Attach Pin PDF** to include a PDF with the Pin's details and photos as an attachment on every email the rule sends.
+
+## What the email contains
+
+Every notification email includes:
+
+- The Pin's title and description
+- Status, assigned department, and assignee
+- Location and reporter
+- Due date
+- A **View Pin** button that links back to the Pin in PIN
+- The Pin PDF, if Attach Pin PDF is enabled
+
+<Info>
+  External recipients who click **View Pin** will be prompted to log in. External access to Pin details without an account is on the roadmap.
+</Info>
+
+## Managing rules
+
+From the Team email notifications page you can:
+
+- **Edit** any rule to change its name, triggers, filters, recipients, or PDF setting
+- **Delete** rules that are no longer needed
+- **Search** for a rule by name
+
+Changes take effect immediately — the next matching Pin event will use the updated rule.
