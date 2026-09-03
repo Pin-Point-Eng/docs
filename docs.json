@@ -87,8 +87,8 @@
           "admin/map-and-locations",
           "admin/global-settings",
           "admin/users-and-teams",
-          "admin/post-launch",
-          "admin/team-email-notifications"
+          "admin/team-email-notifications",
+          "admin/post-launch"
         ]
       },
       {
