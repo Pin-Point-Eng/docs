@@ -41,6 +41,7 @@ The Pin actions that fire the email. A single rule can fire on one or more of th
 - A pin status changes to completed
 - A pin status changes to cancelled
 - A pin is reopened
+- A pin becomes overdue (fires when a Pin passes its due date and time without being completed)
 
 ### 3. Match filters
 
@@ -52,6 +53,7 @@ Narrow which Pins the rule applies to. Filters include:
 | **Location** | Does not affect the rule, or specific locations |
 | **Equipment** | Does not affect the rule, or specific equipment |
 | **Inventory** | Does not affect the rule, or specific inventory items |
+| **Assignee** | Any assignee, or specific assignees |
 
 All filters combine — the Pin must match every filter you set for the rule to fire.
 
