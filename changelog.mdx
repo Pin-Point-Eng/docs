@@ -1,385 +1,274 @@
 ---
 title: "Changelog"
-description: "Product updates, feature releases, and important improvements in Pin."
+description: "New features, improvements, and fixes in Pin."
 rss: true
 ---
 
 # Changelog
 
-Follow this page for major Pin updates, new workflows, and important changes that affect how your team uses the app. Entries tagged **Internal** are engineering, support, and operations notes for the Pin team.
+What's new in Pin, newest first. Entries tagged **Internal** are engineering, support, and operations notes for the Pin team.
 
-<Update label="September 28, 2026" tags={["Pins","Notifications","Map","Web","Mobile"]} description="Pin translation, expanded team email notification rules, clone Pin attachments, and map search">
-  **On-demand Pin translation.** Every Pin can now be translated into any supported language on both web and mobile. Tap the **Translate** button on the Pin, pick a language from the searchable picker, and every field inside the Pin's details translates — title, description, checklist, form fields, completion notes, and inventory usage notes. Tap **Show original** to flip back. Any user with access to the Pin can translate it. See [Pin Translation](/pins/managing-a-pin#pin-translation).
+<Update label="October 2, 2026" tags={["Pins","Incidents","Media"]} description="Redesigned detail pages">
+  Every record page on web has a cleaner layout that's faster to work in.
 
-  **Team email notification updates.** Two additions to [team email notification rules](/admin/team-email-notifications):
+  - Edit titles, descriptions, and details in place — no edit dialog
+  - The next status action sits in the header
+  - The header collapses as you scroll, keeping tabs in reach
+  - Create anything related from the record's **Create** menu
+  - Incident reports open and edit right on the incident
 
-  - **Overdue trigger** — a new event that fires when a Pin passes its due date and time without being completed. Useful for looping in leadership, dispatch, or vendors when SLAs slip.
-  - **Assignee filter** — a new match filter to scope rules to specific assignees (any assignee, or specific assignees), in addition to the existing Department, Location, Equipment, and Inventory filters.
+  ### Improvements
 
-  **Clone Pins with attachments.** [Cloning a Pin](/pins/managing-a-pin#cloning-a-pin) now optionally carries attachments over to the clone. Clone continues to cover any Pin — regular or recurring — on both web and mobile.
+  - Recurring series can have a due time
+  - "This and all future" due date edits now apply to the series
+  - Every create page shares one layout
+  - Create menu grouped into Work and Assets
+  - Media viewer: arrow keys, download, zoom, and PDF preview
+  - Media viewer sizes to the photo, video, or PDF
+  - Uploads show progress per file with retry
+  - Drop files anywhere or paste from the clipboard
+  - iPhone photos display as profile pictures
+  - "Discard changes?" before leaving an unsaved form
+  - Open list rows in a new tab
+  - Mobile shows when you're offline
+  - Mobile keeps your Pin if creating it fails
 
-  **Map search on web.** The web [map](/viewing-navigating/map-view#map-search-web) now includes a search bar for jumping to any location on the property. Type a location name to find and center the map on it — faster than scrolling and zooming across a large venue.
+  ### Fixes
 
-  **Additional improvements** shipped in this release but not requiring separate documentation include: domain-scoped SSO enforcement, web tabs that stay on a different facility each, a redesigned mobile create menu (iOS tab bar, Android keeps the "+" button), location previews on the web map now show media thumbnails and documents with clickable emergency-contact phone numbers and emails, refreshed team email notification rules table with compact filter badges and inline validation, attached and downloaded Pin PDFs now show times in the tenant's timezone, canceled duplicate Pins get their own badge on web, refreshed top bar / notifications / settings / user profiles / department details, and a batch of chat, analytics, document, and reliability improvements across web and mobile.
+  - Routine rounds like fire watches are no longer flagged as duplicates
+  - Mobile chats clear their unread badge once opened
+  - Pinch to zoom works on Android
+  - The Pins tab keeps your chosen scope on Android
+  - Saving inventory no longer resets stock to 0
+  - Cloning a recurring series copies its attachments
+  - Android opens PDFs in your PDF app
 </Update>
 
-<Update label="September 3, 2026" tags={["Admin","Notifications","Web"]} description="Team Email Notifications — send automatic emails on Pin activity to anyone, inside or outside the organization">
-  Set up custom rules that automatically send emails whenever specific Pin activity happens across the property. Rules can notify anyone — including external vendors, contractors, tenants, or leadership — without needing them to have a PIN account.
+<Update label="September 28, 2026" tags={["Pins","Notifications","Map"]} description="Translate any Pin">
+  Read any Pin in your own language. [Learn more](/pins/managing-a-pin#pin-translation)
 
-  Configure rules under **Settings > Team email notifications** on the web app. Each rule includes:
+  - Tap **Translate** on a Pin and pick a language
+  - Translates the title, description, checklist, form fields, and notes
+  - Tap **Show original** to switch back
+  - Works on web and mobile for anyone who can see the Pin
 
-  - **Trigger events** — Pin created, status changed (to in progress, blocked, completed, cancelled), or reopened. One rule can fire on multiple events.
-  - **Match filters** — narrow by department, location, equipment, or inventory. All filters combine.
-  - **Recipients** — To and CC email addresses. Anyone, internal or external.
-  - **Attach Pin PDF** — optionally include a PDF of the Pin's details and photos.
+  ### Improvements
 
-  Access is controlled by the new **Team email notifications** permission under **Administration** in [Roles & Permissions](/getting-started/roles-permissions). Admins can grant it to any role.
-
-  See [Team Email Notifications](/admin/team-email-notifications) for full details.
+  - Team email rules can fire when a Pin goes overdue
+  - Team email rules can match specific assignees
+  - Cloning a Pin can copy its attachments
+  - Search the web map for any location
+  - Web map previews show photos, documents, and tappable emergency contacts
+  - Each browser tab can stay on a different facility
+  - Redesigned create menu on mobile
+  - Pin PDFs show times in your venue's timezone
+  - Canceled duplicates get their own badge on web
+  - Refreshed top bar, notifications, settings, and profile pages on web
+  - SSO can be required for specific email domains
 </Update>
 
-<Update label="August 27, 2026" tags={["AI","Pins","Projects","Procedures","Chat","Map","Equipment","Vendors","Incidents","Analytics","Web","Mobile"]} description="Batch release: AI safety detection, clone Pins, AI Duplicate Pin detection, project workflow upgrades, map previews, QR codes, CSV exports, and more">
-  A large batch of improvements across the platform.
+<Update label="September 3, 2026" tags={["Admin","Notifications"]} description="Team email notifications">
+  Email anyone about Pin activity — vendors, contractors, or leadership — without a Pin account. [Learn more](/admin/team-email-notifications)
 
-  **AI safety-risk detection.** When creating a [Pin](/pins/creating-a-pin), PIN's AI now evaluates the title, description, and any Snap-to-Pin photo for urgent safety risks — exposed wiring, spills, hazards. A **Safety Risk Detected** banner appears with two options: **Mark as High Priority** or **Dismiss**. If dismissed or ignored, the Pin is not automatically marked as priority. Available on both mobile and web.
-
-  **Clone Pins.** Any Pin can now be cloned into a new Pin from the three-dot (⋯) menu, on both web and mobile. Every field carries over — title, assignee, checklist, followers, linked equipment and inventory, attachments, and more. A review screen opens with everything pre-filled so you can adjust before submitting. Chat history does not carry over. See [Cloning a Pin](/pins/managing-a-pin#cloning-a-pin).
-
-  **AI Duplicate Pin detection.** PIN's AI now checks every new [Pin](/pins/managing-a-pin#ai-duplicate-pin-detection) against existing open Pins to catch potential duplicates. If a match is found, a **Potential duplicate detected** banner appears on the Pin's Info tab with a plain-language explanation of the match and the distance to the potential duplicate. Two options: **Not a duplicate** (keeps the Pin active) or **Cancel duplicate** (cancels this Pin). Available on web and mobile.
-
-  **AI procedure creation now accepts more file types.** The AI generator in the [Procedures](/modules/procedures#build-a-procedure-with-ai) module now accepts PDFs, Word documents, spreadsheets (XLSX), CSV files, and images. Upload any of these — a printed inspection sheet, a spreadsheet of routine items, an existing SOP — and PIN's AI extracts the checklist automatically.
-
-  **New Pin filters.** The [Pin list view](/viewing-navigating/list-view-filters-groups#filters-search) now includes filters for **Potential Duplicates**, **Linked Equipment**, **Linked Inventory**, and **Attachments** — making it easier to surface Pins that need cleanup or have specific context.
-
-  **Chat Updates mode stays on.** In [Chat](/communication/chat#messages-vs-updates), the **Updates** mode now stays on once enabled, so you can post multiple Updates in a row without re-selecting it each time. Turn it off manually when you're back to regular messages.
-
-  **Project workflow upgrades.** [Projects](/modules/projects) received several enhancements:
-
-  - **Category comments** — every project category now has its own comment thread for updates and coordination that isn't tied to a specific Pin.
-  - **Category selection during Pin creation** — when adding a Pin to a project, select the category directly from the create screen.
-  - **Project log** — every action on a project (Pin adds/removes, category changes, follower changes, status changes, document uploads) is recorded. Accessible from the **Logs** button on the web app's project page or the three-dot menu on mobile.
-  - **Project Chat in the Chat module** — project chats now surface in the main [Chat module](/communication/chat) alongside your other conversations, filtered under the **Projects** tab. Identified by a project file icon.
-
-  **Map previews (web).** On the web app, clicking any location, Pin, or equipment item on the [map](/viewing-navigating/map-view) opens a preview panel with the most useful information at a glance — status, active work, emergency contacts for locations, condition and department for equipment. Every preview includes an **Open details** button.
-
-  **Equipment ↔ Vendor linking.** Each piece of [equipment](/modules/equipment) can now be linked to one [vendor](/modules/vendors). The link can be created from either the equipment detail page or the vendor's profile. On the vendor profile, linked equipment appears in its own section alongside linked inventory.
-
-  **QR codes for Equipment and Inventory.** Generate printable QR codes from the web app: bulk-select items from the Equipment or Inventory list view, then click **Actions** to generate a printable sheet. On mobile, tap the QR scanner button at the top of the [Overview screen](/viewing-navigating/overview-dashboard) to open the camera — scan any code to jump directly to the linked record.
-
-  **CSV exports across list views.** Every list view page now has an **Export** button at the top right — Pins, Recurring Pins, Groups, Projects, Incidents, Equipment, Inventory, Locations, Documents, Vendors, Procedures, Users, Departments, and more. Exports respect any filters applied.
-
-  **Daily summary email for managers.** Every manager now receives a daily email summarizing yesterday's operational activity — completions, creations, active members, time logged, department activity. Users can unsubscribe from their profile settings.
-
-  **Incident filter enhancements.** [Incidents](/modules/incidents) now includes dedicated **Medical** and **Slip-and-Fall** filter categories for easier reporting on the most common incident patterns.
-
-  **Additional improvements** shipped in this release but not requiring separate documentation include: recurring Pins preserving checklist sections when cloned, refreshed dashboard navigation and settings, cleaner "Remove all" follower actions, activity histories opening in side panels, project chat photo sharing and mentions, auto-follow for locations from search, platform-wide mobile search, expanded QR-code workflows (printable labels, bulk label printing, PNG downloads), redesigned mobile project details, sorting Pins within groups by due date, creation date, or title, standardized timezone behavior with clearer labels, recurring Pin attachments scoped to current instance or current-and-future, group management selector polish, "Manage All" document permission for authorized roles, vendor contact form validation, refreshed mobile vendor profiles, Pin CSV exports preserving active sorting, mobile privacy warning before sending photos to AI, and various mobile reliability improvements including logout clearing notifications and the app badge.
+  - Trigger on created, in progress, blocked, completed, cancelled, or reopened
+  - Narrow by department, location, equipment, or inventory
+  - Send to any To and CC addresses
+  - Optionally attach a PDF of the Pin with photos
+  - Set up under **Settings › Team email notifications**
 </Update>
 
-<Update label="July 10, 2026" tags={["AI","Procedures","Recurring Pins"]} description="Build procedures and checklists with AI">
-  You can now generate [**procedure templates**](/modules/procedures) and recurring Pin checklists in seconds with AI. Tap the sparkle icon ✨ on the create screen and choose one of three inputs:
+<Update label="August 27, 2026" tags={["AI","Pins","Projects","Map","Equipment"]} description="Safety risk and duplicate detection">
+  Pin's AI now checks every new Pin for hazards and repeats. [Learn more](/pins/managing-a-pin#ai-duplicate-pin-detection)
 
-  - **Take a photo** of a physical checklist — a printed form, laminated sheet, or wall-mounted inspection card.
-  - **Upload a file** — a PDF, doc, or image of an existing checklist or SOP.
-  - **Describe it** — tell the AI what kind of checklist or procedure you want and it will draft the items for you.
+  - Flags urgent hazards like exposed wiring or spills from the text and photo
+  - Mark it high priority in one tap, or dismiss
+  - Spots likely duplicates of open Pins and explains the match
+  - Keep the Pin or cancel the duplicate
 
-  Review, edit, and save. Available on both **mobile** and **web**.
+  ### New
+
+  - Clone any Pin from its **⋯** menu
+  - Project categories get comment threads and a project log
+  - Project chats appear in the Chat module
+  - Click anything on the web map for a quick preview
+  - Print QR codes for equipment and inventory; scan them on mobile
+  - Export any list to CSV
+  - Daily summary email for managers
+
+  ### Improvements
+
+  - AI procedure creation reads PDFs, Word, spreadsheets, CSV, and images
+  - New Pin filters: potential duplicates, linked equipment, linked inventory, attachments
+  - Link equipment to a vendor
+  - Medical and Slip-and-Fall incident filters
+  - Chat's Updates mode stays on until you turn it off
+  - Sort Pins in a group by due date, creation date, or title
+  - Search everything from one place on mobile
+  - Photos and mentions in project chats
+  - Mobile asks before sending a photo to AI
 </Update>
 
-<Update label="July 8, 2026" tags={["Locations"]} description="Location Status">
-  Every [**location**](/modules/locations) now has a status that shows its current operational state. Tap the status pill at the top of the location page and pick from:
+<Update label="July 10, 2026" tags={["AI","Procedures"]} description="Build checklists with AI">
+  Create a procedure or recurring checklist in seconds. [Learn more](/modules/procedures)
 
-  - **Operational** (green) — default state; the location is functioning normally.
-  - **Occupied** (blue) — the location is currently in use.
-  - **Needs Attention** (amber) — something at the location requires review or follow-up.
-  - **Out of Service / Closed** (red) — the location is not currently usable, or is closed.
-  - **Vacant** (grey) — the location is empty or unoccupied.
-
-  Any user with access to the location can change its status. Inside the Locations module, filter the list by status to see every location in a given state at a glance.
+  - Tap ✨ on the create screen
+  - Snap a printed checklist, upload a file, or describe what you need
+  - Review the drafted items and save
 </Update>
 
-<Update label="July 3, 2026" tags={["Vendors","Inventory"]} description="Vendors module released">
-  A new [**Vendors**](/modules/vendors) module gives your venue one place to track every external party you work with — vendors, contractors, and suppliers.
+<Update label="July 8, 2026" tags={["Locations"]} description="Location status">
+  See at a glance whether a [location](/modules/locations) is ready to use.
 
-  - Each vendor profile stores basic info, a **Contact List** with multiple contacts (one can be marked **Primary**), and the **inventory items** sourced from that vendor.
-  - Inventory items are now linked to a real vendor profile — this **replaces the old free-text Supplier field**. From an inventory item, see which vendor supplies it. From a vendor profile, see every item they supply.
-  - **Documents** can be uploaded directly to a vendor profile — contracts, W9s, certificates of insurance, price lists, and more. Each document has its own permission layer: **Public** (anyone who can view the vendor) or **Specific access** (selected users and/or departments). Vendor documents also surface in the [Documents module](/modules/documents).
-  - Vendors are **scoped by department** — you can see and edit vendors that belong to your department(s). Admins and All-Teams Managers see every vendor across the venue.
-
-  Find Vendors as a top-level module in the sidebar, alongside Documents and Procedures.
+  - Set **Operational**, **Occupied**, **Needs Attention**, **Out of Service**, or **Vacant**
+  - Anyone with access can change it
+  - Filter the Locations list by status
 </Update>
 
-<Update label="June 30, 2026" tags={["Procedures","Checklists"]} description="Procedure templates and collapsible checklist sections">
-  Save reusable checklists once and apply them anywhere. The new **Procedures** library stores standard checklists — opening walk-throughs, equipment inspections, turnover routines — that any user can pull into a Pin or Recurring Pin.
+<Update label="July 3, 2026" tags={["Vendors","Inventory"]} description="Vendors">
+  Keep every vendor, contractor, and supplier in one place. [Learn more](/modules/vendors)
 
-  - When adding a checklist, choose **New checklist** to build from scratch or **Use template** to pull from a saved [procedure](/modules/procedures).
-  - Procedures are venue-wide. Any user can create one, and every user can see and use every procedure.
-  - **Checklist sections** let you organize long checklists into collapsible groups — works on procedures, Pins, and Recurring Pins.
-  - Edits to a procedure template are **not retroactive** — they only affect Pins and Recurring Pin instances created after the edit.
-
-  Find Procedures under **Library → Procedures** on web and **More → Procedures** on mobile.
+  - Profiles with contacts, supplied inventory, and documents
+  - Inventory links to a real vendor instead of a free-text supplier
+  - Store contracts, W-9s, and insurance certificates
+  - Vendors belong to departments; admins see them all
 </Update>
 
-<Update label="June 12, 2026" tags={["Documents"]} description="Documents module released">
-  Documents now sit throughout PIN — upload them to **Equipment, Locations, Pins, Incidents, and Projects**, wherever the work happens. A new central **Documents module** surfaces every document you have permission to view in one place, so you can find any file without navigating into individual records.
+<Update label="June 30, 2026" tags={["Procedures","Checklists"]} description="Procedure templates">
+  Save a checklist once and reuse it anywhere. [Learn more](/modules/procedures)
 
-  Document access depends on where the document is uploaded:
-
-  - **Pins, Incidents, and Projects** — documents are visible to the followers of that parent record.
-  - **Equipment and Locations** — when uploading, the uploader chooses **Public** (anyone on the platform) or **Specific access** (selected individual users and/or entire departments).
-
-  Documents stay attached to their source — the Documents module is an access layer, not a separate storage location.
+  - Add a template to any Pin or recurring Pin with **Use template**
+  - Split long checklists into collapsible sections
+  - Template edits only affect new Pins
 </Update>
 
-<Update label="June 3, 2026" tags={["Tenant Portal"]} description="Per-QR routing and submitter email opt-in">
-  Tenant Portal routing is now set **per QR code**, not at the organization level. When generating a QR code from the **Pin QR Generator**, admins choose which team receives submissions from that specific code — so different codes across the property can route to different departments.
+<Update label="June 12, 2026" tags={["Documents"]} description="Documents">
+  Attach documents wherever the work happens, and find them all in one place.
 
-  Submitters can now also opt in to email updates when filling out the request form. If they opt in, they receive emails as the Pin's status changes from intake through completion.
-
-  The Tenant Portal routing setting has been removed from Organization Settings.
+  - Upload to equipment, locations, Pins, incidents, and projects
+  - Browse everything in the new **Documents** module
+  - Pin, incident, and project documents follow the record's followers
+  - Equipment and location documents can be public or shared with specific people
 </Update>
 
-<Update label="June 3, 2026" tags={["Web","Locations","Tenant Portal"]} description="Team-routed QR code generator">
-  A new Pin QR generator replaces the separate property-wide and location QR dialogs with a single tool that routes scanned [requests](/modules/tenant-portal) to the right team.
+<Update label="June 3, 2026" tags={["Tenant Portal","Locations"]} description="QR codes that route to the right team">
+  Each request QR code sends submissions straight to the right team. [Learn more](/modules/tenant-portal)
 
-  - Generate a QR code from the overview or any [location](/modules/locations) page and pick the team (for example, Front Desk or Housekeeping) that should receive submissions.
-  - Optionally lock the code to a specific location so submitters cannot change it after scanning.
-  - The submission form now shows the routed team as read-only context, so requesters can see where their report is going.
-  - QR links are signed, so tampered or outdated links prompt the submitter to scan a freshly generated code.
-
-  The previous tenant-wide "default QR department" setting has been removed — routing is now chosen per QR code at generation time.
+  - Pick the team when you generate the code
+  - Optionally lock a code to one location
+  - Submitters see where their request is going
+  - Submitters can opt in to email updates
+  - Outdated or altered links ask for a fresh scan
 </Update>
 
-<Update label="June 2, 2026" tags={["Mobile","Notifications"]} description="Push notifications follow account switches">
-  Mobile push notifications now reliably move with you when you switch accounts on the same device.
+<Update label="June 2, 2026" tags={["Notifications"]} description="Notifications follow your account">
+  Push notifications now move with you when you switch accounts on the same phone.
 
-  Previously, a device could keep delivering notifications to a previous account after logout — especially when switching between organizations. The app now reassigns the device to your current account on sign-in, so [notifications](/onboarding/chat-and-notifications) go to the right place.
+  ### Improvements
+
+  - Hardened how web and mobile handle network requests and uploads
+
+  ### Fixes
+
+  - Mobile group counts respect your department filters
+  - Uploads no longer fail in browsers that report progress incorrectly
 </Update>
 
-<Update label="June 2, 2026" tags={["Mobile","Pins"]} description="Group badge respects department filters">
-  The Pins-tab group count badge on mobile now reflects any department filters you have selected, so the badge stays in sync with the Pin groups list you actually see.
+<Update label="June 1, 2026" tags={["Projects","Permissions"]} description="Project permissions">
+  Control who can see and change projects. [Learn more](/getting-started/roles-permissions)
+
+  - **View All**, **Create**, **Edit**, and **Delete** permissions
+  - Admins have all four automatically
+  - Grant them under **Settings › Roles & Permissions**
+
+  ### Improvements
+
+  - Remove a follower right from its chip
+  - The followers picker counts selections and searches every department
+  - Pin groups only show groups you can see
+  - Consistent confirm prompts across web
 </Update>
 
-<Update label="June 2, 2026" tags={["Web","Mobile","Security"]} description="Security and reliability improvements">
-  Behind-the-scenes updates this week harden Pin's network handling on web and mobile.
+<Update label="May 31, 2026" tags={["Recurring Pins","Equipment"]} description="Attachments on recurring Pins">
+  Add photos, videos, and PDFs when you create a recurring Pin on web.
 
-  - Stronger protection against prototype-pollution-style payloads on requests that accept structured form data.
-  - Fixed a case where HTTPS traffic could fall back to cleartext when routed through certain proxy configurations.
-  - More resilient file upload progress reporting, so uploads no longer fail on browsers that emit malformed progress events.
-  - Non-ASCII characters in request headers are now preserved end-to-end, improving support for internationalized data.
+  ### Improvements
 
-  No action is required.
+  - Update linked equipment status while creating a Pin
+  - Clearer messages when an action fails
+  - Roles separate creating records from editing them
 </Update>
 
-<Update label="June 1, 2026" tags={["Web","Mobile","Projects","Roles","Permissions"]} description="Project permissions">
-  Projects now have their own role-based permissions, matching how Incidents work today.
-
-  - **View All** — see every project; without it, users only see projects they follow.
-  - **Create**, **Edit**, **Delete** — gate the matching project actions on web and mobile, including category, follower, document, and linked-Pin changes.
-
-  Admin and System roles automatically receive all four project permissions. For other roles, an admin needs to grant them under **Settings > Roles & Permissions** before users can create, edit, or delete projects. Until then, those actions return a permission error and are hidden in the UI.
-
-  See [Roles and permissions](/getting-started/roles-permissions) for how to update role access.
+<Update label="May 31, 2026" tags={["Internal"]} description="Engineering notes">
+  - Linting moved to Biome and prek, with staged formatting hooks
+  - One shared error toast for failed actions on web and mobile
 </Update>
 
-<Update label="June 1, 2026" tags={["Web","Pins","Incidents"]} description="Followers picker visual polish">
-  The Select Followers dialog now gives department headers clearer visual weight over the users inside them, making groups easier to scan.
+<Update label="May 29, 2026" tags={["Pins"]} description="Create Pin groups from the Groups page">
+  Start a new Pin group without leaving the list.
+
+  ### Fixes
+
+  - Field users see due-soon Pins they're assigned to, following, or created
 </Update>
 
-<Update label="June 1, 2026" tags={["Web"]} description="Consistent confirmation dialogs">
-  Confirm and delete prompts across the web dashboard now share a single, consistent dialog.
-
-  - Deleting a chat announcement now opens a standard confirmation dialog with a clear description, instead of an in-place hover prompt that could be dismissed by accident.
-  - All confirmations—deleting [Pins](/pins/managing-a-pin), Pin groups, [Incidents](/modules/incidents), projects, equipment types and manufacturers, inventory categories and [vendors](/modules/vendors), emergency contacts, roles, users, and teams, plus removing followers and disconnecting SSO—now behave the same way, with focus on the action buttons and a loading spinner while the change is saving.
-  - Outside-clicks no longer close a confirmation by accident.
+<Update label="May 29, 2026" tags={["Internal"]} description="Engineering notes">
+  - Security hardening: analytics limits, auth timing, upload validation, logout token revocation, map credentials
+  - Overview ownership filter includes personally visible Pins for own-scope users
 </Update>
 
-<Update label="June 1, 2026" tags={["Web","Mobile","Pins"]} description="Department-scoped Pin groups">
-  Pin group browse surfaces now filter by department. The web Groups page, the "Groups only" chip, the mobile group filter, and the mobile Pins-tab count badge all show only groups containing Pins you can see.
+<Update label="May 28, 2026" tags={["Recurring Pins","Analytics"]} description="Edit recurring checklists">
+  Edit a recurring series' checklist on web and mobile, even before its first Pin.
 
-  Empty groups still appear for everyone so newly created groups stay visible, and admins with full access continue to see every group. Add-pin selectors are unchanged, so you can still add a Pin to any group regardless of department.
+  ### Improvements
+
+  - Daily summaries follow your venue's timezone
 </Update>
 
-<Update label="June 1, 2026" tags={["Web","Pins","Incidents"]} description="Easier follower management">
-  Adding and removing [followers](/pins/managing-a-pin#followers) on Pins and [Incidents](/modules/incidents) from the web dashboard is now much faster.
-
-  - Follower chips show an `×` on hover with a confirmation prompt, so you can remove a follower directly from the followers list without opening the picker.
-  - The Select Followers picker now auto-expands departments that already contain followers, shows an "N selected" badge on each department, and displays a running total of selected followers.
-  - Searching expands all departments so you can find people across the org without clicking through each one.
-  - Incident followers now match the same chip styling as Pin followers for a consistent look.
-
-  Pin follower removals still follow the recurring-pin update scope prompt, and incident follower removal respects the `incidents.edit` permission.
+<Update label="May 28, 2026" tags={["Internal"]} description="Engineering notes">
+  - Daily summary jobs tick hourly and run per venue local hour; check scheduler keys after deploy
+  - Recurring checklist edits send the chosen scope through the bulk checklist endpoint
 </Update>
 
-<Update label="May 31, 2026" tags={["Web","Recurring Pins"]} description="Recurring Pin attachments">
-  Recurring Pins created from the web dashboard can now include images, videos, and PDFs at creation time.
+<Update label="May 27, 2026" tags={["Authentication","Locations","Recurring Pins"]} description="Single sign-on">
+  Sign in with your company's identity provider.
 
-  Uploads use the same attachment flow as regular Pin creation and prevent submission while media is still uploading.
+  - Admins turn on SSO for their organization
+  - Let specific people bypass it
+  - Works on web and mobile
+
+  ### Improvements
+
+  - Locations belong to managed buildings
+  - Adjust a cloned recurring series before creating it
+  - Choose whether recurring title and description edits apply to future Pins
+  - Remove a due date from a Pin on web
+  - Inventory notes show restock and usage amounts
+  - "Resolve" wording used everywhere
+  - Better date-range picker in analytics
 </Update>
 
-<Update label="May 31, 2026" tags={["Web","Mobile","Pins","Equipment"]} description="Equipment status in Pin creation">
-  Users can now change linked equipment status while creating a Pin on web or mobile.
-
-  This keeps equipment condition updates attached to the work being reported, without needing a separate trip to the equipment record.
+<Update label="May 27, 2026" tags={["Internal"]} description="Engineering notes">
+  - Postgres row-level security enforced; `yarn db:check-rls` checks tenant models
+  - `main` and `staging` deploys share one workflow
+  - WorkOS SSO routes, settings, bypass handling, and audit events; SSO reports unavailable until configured
+  - Building migration creates managed Buildings and drops the free-text column
+  - Write permissions split into create and edit
+  - Mobile attachment removal disconnects media instead of soft-deleting it
 </Update>
 
-<Update label="May 31, 2026" tags={["Web","Mobile"]} description="Clearer action errors">
-  Web and mobile now show clearer default messages when an action fails, including permission-related failures.
+<Update label="May 24, 2026" tags={["Chat","Roles"]} description="Pin chat membership controls">
+  Choose exactly which roles join department Pin chats.
 
-  Failed saves, uploads, and edits should now be easier to understand without each screen needing its own custom error message.
+  ### Fixes
+
+  - Tapping a location on the mobile map works under your location dot
 </Update>
 
-<Update label="May 31, 2026" tags={["Web","Roles","Permissions"]} description="Roles and permissions cleanup">
-  Role management now distinguishes between creating new records and editing existing records.
-
-  The permissions detail view has also been streamlined so admins can scan role access more easily.
+<Update label="May 24, 2026" tags={["Internal"]} description="Engineering notes">
+  - Pin chat auto-join uses the `autoJoinDepartmentPinChats` role flag
+  - Mobile map taps fall back to a Mappedin coordinate lookup
 </Update>
 
-<Update label="May 31, 2026" tags={["Internal","Developer Experience","CI"]} description="Biome and staged checks">
-  Linting moved to Biome and prek, and staged formatting hooks were added for local commits.
-
-  This is not customer-facing, but it changes how contributors should expect formatting and lint checks to run locally and in CI.
-</Update>
-
-<Update label="May 31, 2026" tags={["Internal","Support","Web","Mobile"]} description="Central mutation error handling">
-  Web and mobile now use global TanStack Query mutation error toasts for generic action failures.
-
-  QA should expect fewer screen-specific duplicate error messages, and support should see clearer permission-denied copy for failed actions.
-</Update>
-
-<Update label="May 29, 2026" tags={["Web","Pins"]} description="Pin group creation">
-  Pin groups can now be created directly from the Pin Groups page, making it faster to organize related work without leaving the group list.
-</Update>
-
-<Update label="May 29, 2026" tags={["Web","Mobile","Pins"]} description="Due-soon Pins for field users">
-  The overview due-soon feed now correctly includes Pins that field users can see through assigned, followed, or created-by access.
-</Update>
-
-<Update label="May 29, 2026" tags={["Internal","Security","Server","Web","Mobile"]} description="Security hardening">
-  Security hardening landed for analytics request limits, auth response timing, media upload validation, production validation errors, web logout token revocation, and MappedIn map credential handling.
-
-  Keep public release notes high-level, and track any tenant credential rotation as a separate operational task.
-</Update>
-
-<Update label="May 29, 2026" tags={["Internal","Support","Pins","Permissions"]} description="Field-user due-soon visibility">
-  The overview ownership filter now includes personally visible Pins for own-scope users.
-
-  This should resolve cases where field users had no due-soon Pins even when assigned to or following relevant work.
-</Update>
-
-<Update label="May 28, 2026" tags={["Web","Mobile","Recurring Pins","Checklists"]} description="Recurring series checklist editing">
-  Recurring series checklists can now be edited directly on web and mobile.
-
-  This includes future-start series that have not generated their first instance yet.
-</Update>
-
-<Update label="May 28, 2026" tags={["Analytics","Notifications"]} description="Tenant-local daily summaries">
-  Daily summaries now run according to each tenant's local timezone, so recap data lines up with the correct local business day.
-</Update>
-
-<Update label="May 28, 2026" tags={["Internal","Jobs","Notifications","Analytics"]} description="Tenant-local daily summary dispatch">
-  Daily summary compute and email jobs now tick hourly and dispatch only for tenants whose local hour matches the job target.
-
-  After deploy, verify the existing scheduler keys use the hourly pattern and that non-Eastern tenants receive summaries for the correct local date.
-</Update>
-
-<Update label="May 28, 2026" tags={["Internal","QA","Recurring Pins","Web","Mobile"]} description="Recurring checklist propagation">
-  Recurring series checklist editing now has direct web and mobile paths, and web checklist propagation sends the selected update scope through the bulk checklist endpoint.
-
-  Regression checks should include future-start series, this-instance edits, and this-and-future edits.
-</Update>
-
-<Update label="May 27, 2026" tags={["Web","Recurring Pins"]} description="Editable recurring series clones">
-  Cloned recurring series can now be adjusted before creation, including assignment, location, equipment, description, checklist, and form-field details.
-</Update>
-
-<Update label="May 27, 2026" tags={["Web","Recurring Pins"]} description="Recurring title and description scope">
-  Editing a recurring Pin title or description now follows the same scoped update flow as other recurring changes.
-
-  Users can choose whether to update only one instance or future instances too.
-</Update>
-
-<Update label="May 27, 2026" tags={["Inventory"]} description="Inventory quantity notes">
-  Inventory notes now include explicit quantity changes for restocks and usage, making the notes feed easier to understand without opening the audit log.
-</Update>
-
-<Update label="May 27, 2026" tags={["Web","Pins"]} description="Clear Pin due dates">
-  Web users can now remove an existing due date from a Pin, including recurring Pins that use scoped update flows.
-</Update>
-
-<Update label="May 27, 2026" tags={["Web","Mobile","Pins"]} description="Resolve language">
-  Pin lifecycle language now consistently uses "Resolve" and "Resolved" across web and mobile, aligning the UI with the active resolve workflow.
-</Update>
-
-<Update label="May 27, 2026" tags={["Web","Mobile","Authentication"]} description="SSO support">
-  Pin now supports WorkOS SSO flows across web, mobile, tenant management, and tenant/user settings.
-
-  Admins can configure tenant-level SSO and user SSO bypass controls.
-</Update>
-
-<Update label="May 27, 2026" tags={["Locations","Tenant Management"]} description="Managed Buildings">
-  Locations now use managed Building records instead of freeform building text.
-
-  Tenant management includes controls for Buildings, and existing location building values were migrated into managed records.
-</Update>
-
-<Update label="May 27, 2026" tags={["Web","Analytics"]} description="Analytics improvements">
-  Pin analytics now include an improved date-range picker and a clearer creation-platform visualization.
-</Update>
-
-<Update label="May 27, 2026" tags={["Internal","Database","Security","Deployment"]} description="RLS tenant isolation">
-  Base Postgres row-level security enforcement was promoted to main, including a read-only `yarn db:check-rls` command and automated checks for tenant models.
-
-  Branch-aware deploy routing for `main` and `staging` also moved into the shared deploy workflow.
-</Update>
-
-<Update label="May 27, 2026" tags={["Internal","Authentication","Deployment","Tenant Management"]} description="WorkOS SSO rollout">
-  SSO support includes new server routes, tenant/admin settings, user bypass handling, contracts, query keys, audit events, and database migrations.
-
-  The app remains bootable when SSO environment variables are unset, but SSO flows report service-unavailable style errors until configured.
-</Update>
-
-<Update label="May 27, 2026" tags={["Internal","Database","Locations","Tenant Management"]} description="Managed Building migration">
-  The location building migration creates managed Building rows, links existing locations, and removes the legacy freeform building column.
-
-  After deployment, spot-check tenant management for high-volume tenants and confirm active location counts look correct before editing or deleting Building records.
-</Update>
-
-<Update label="May 27, 2026" tags={["Internal","Permissions","Database","Web","Mobile"]} description="Create/edit permission split">
-  Module write permissions were split into explicit create and edit permissions across contracts, server route guards, web, mobile, seed data, and role storage.
-
-  The migration converts old stored write permissions into the new create/edit pair.
-</Update>
-
-<Update label="May 27, 2026" tags={["Internal","Mobile","Media","Support"]} description="Mobile media removal behavior">
-  Mobile attachment removal now disconnects media from the parent record without eagerly soft-deleting the Media row first.
-
-  This avoids validation failures caused by tenant-scoped soft-delete filters. Orphaned media cleanup remains a separate concern.
-</Update>
-
-<Update label="May 24, 2026" tags={["Chat","Roles","Pins"]} description="Department Pin chat membership">
-  Department Pin chat membership now uses an explicit role setting separate from department notifications.
-
-  This gives admins more precise control over who is auto-added to Pin chats.
-</Update>
-
-<Update label="May 24, 2026" tags={["Mobile","Locations"]} description="Mobile map selection fix">
-  Mobile map taps now resolve the underlying location even when the current-location blue dot captures the tap.
-</Update>
-
-<Update label="May 24, 2026" tags={["Internal","Chat","Roles","Support"]} description="Department Pin chat auto-join">
-  Department Pin chat auto-membership now uses a dedicated `autoJoinDepartmentPinChats` role flag instead of broad department membership or notification preferences.
-
-  User and role changes resync affected Pin chats.
-</Update>
-
-<Update label="May 24, 2026" tags={["Internal","Mobile","Locations","QA"]} description="Mobile map hit testing">
-  Mobile location selection now falls back to Mappedin coordinate lookup when the tap payload does not include a space.
-
-  Regression checks should include tapping directly on the current-location indicator.
-</Update>
-
-<Update label="May 8, 2026" tags={["Help Center"]} description="Help center launched">
-  The Pin help center is now live at [docs.pin.works](https://docs.pin.works).
-
-  The first version includes guides for creating Pins, managing work, using the map, using chat, managing users and teams, working with equipment, inventory, and locations, and reviewing analytics.
+<Update label="May 8, 2026" tags={["Help Center"]} description="Pin help center">
+  Guides for every part of Pin, live at [docs.pin.works](https://docs.pin.works).
 </Update>
