@@ -6,7 +6,7 @@ rss: true
 
 # Changelog
 
-Follow this page for major Pin updates, new workflows, and important changes that affect how your team uses the app.
+Follow this page for major Pin updates, new workflows, and important changes that affect how your team uses the app. Entries tagged **Internal** are engineering, support, and operations notes for the Pin team.
 
 <Update label="September 28, 2026" tags={["Pins","Notifications","Map","Web","Mobile"]} description="Pin translation, expanded team email notification rules, clone Pin attachments, and map search">
   **On-demand Pin translation.** Every Pin can now be translated into any supported language on both web and mobile. Tap the **Translate** button on the Pin, pick a language from the searchable picker, and every field inside the Pin's details translates — title, description, checklist, form fields, completion notes, and inventory usage notes. Tap **Show original** to flip back. Any user with access to the Pin can translate it. See [Pin Translation](/pins/managing-a-pin#pin-translation).
@@ -234,12 +234,36 @@ Follow this page for major Pin updates, new workflows, and important changes tha
   The permissions detail view has also been streamlined so admins can scan role access more easily.
 </Update>
 
+<Update label="May 31, 2026" tags={["Internal","Developer Experience","CI"]} description="Biome and staged checks">
+  Linting moved to Biome and prek, and staged formatting hooks were added for local commits.
+
+  This is not customer-facing, but it changes how contributors should expect formatting and lint checks to run locally and in CI.
+</Update>
+
+<Update label="May 31, 2026" tags={["Internal","Support","Web","Mobile"]} description="Central mutation error handling">
+  Web and mobile now use global TanStack Query mutation error toasts for generic action failures.
+
+  QA should expect fewer screen-specific duplicate error messages, and support should see clearer permission-denied copy for failed actions.
+</Update>
+
 <Update label="May 29, 2026" tags={["Web","Pins"]} description="Pin group creation">
   Pin groups can now be created directly from the Pin Groups page, making it faster to organize related work without leaving the group list.
 </Update>
 
 <Update label="May 29, 2026" tags={["Web","Mobile","Pins"]} description="Due-soon Pins for field users">
   The overview due-soon feed now correctly includes Pins that field users can see through assigned, followed, or created-by access.
+</Update>
+
+<Update label="May 29, 2026" tags={["Internal","Security","Server","Web","Mobile"]} description="Security hardening">
+  Security hardening landed for analytics request limits, auth response timing, media upload validation, production validation errors, web logout token revocation, and MappedIn map credential handling.
+
+  Keep public release notes high-level, and track any tenant credential rotation as a separate operational task.
+</Update>
+
+<Update label="May 29, 2026" tags={["Internal","Support","Pins","Permissions"]} description="Field-user due-soon visibility">
+  The overview ownership filter now includes personally visible Pins for own-scope users.
+
+  This should resolve cases where field users had no due-soon Pins even when assigned to or following relevant work.
 </Update>
 
 <Update label="May 28, 2026" tags={["Web","Mobile","Recurring Pins","Checklists"]} description="Recurring series checklist editing">
@@ -250,6 +274,18 @@ Follow this page for major Pin updates, new workflows, and important changes tha
 
 <Update label="May 28, 2026" tags={["Analytics","Notifications"]} description="Tenant-local daily summaries">
   Daily summaries now run according to each tenant's local timezone, so recap data lines up with the correct local business day.
+</Update>
+
+<Update label="May 28, 2026" tags={["Internal","Jobs","Notifications","Analytics"]} description="Tenant-local daily summary dispatch">
+  Daily summary compute and email jobs now tick hourly and dispatch only for tenants whose local hour matches the job target.
+
+  After deploy, verify the existing scheduler keys use the hourly pattern and that non-Eastern tenants receive summaries for the correct local date.
+</Update>
+
+<Update label="May 28, 2026" tags={["Internal","QA","Recurring Pins","Web","Mobile"]} description="Recurring checklist propagation">
+  Recurring series checklist editing now has direct web and mobile paths, and web checklist propagation sends the selected update scope through the bulk checklist endpoint.
+
+  Regression checks should include future-start series, this-instance edits, and this-and-future edits.
 </Update>
 
 <Update label="May 27, 2026" tags={["Web","Recurring Pins"]} description="Editable recurring series clones">
@@ -290,6 +326,36 @@ Follow this page for major Pin updates, new workflows, and important changes tha
   Pin analytics now include an improved date-range picker and a clearer creation-platform visualization.
 </Update>
 
+<Update label="May 27, 2026" tags={["Internal","Database","Security","Deployment"]} description="RLS tenant isolation">
+  Base Postgres row-level security enforcement was promoted to main, including a read-only `yarn db:check-rls` command and automated checks for tenant models.
+
+  Branch-aware deploy routing for `main` and `staging` also moved into the shared deploy workflow.
+</Update>
+
+<Update label="May 27, 2026" tags={["Internal","Authentication","Deployment","Tenant Management"]} description="WorkOS SSO rollout">
+  SSO support includes new server routes, tenant/admin settings, user bypass handling, contracts, query keys, audit events, and database migrations.
+
+  The app remains bootable when SSO environment variables are unset, but SSO flows report service-unavailable style errors until configured.
+</Update>
+
+<Update label="May 27, 2026" tags={["Internal","Database","Locations","Tenant Management"]} description="Managed Building migration">
+  The location building migration creates managed Building rows, links existing locations, and removes the legacy freeform building column.
+
+  After deployment, spot-check tenant management for high-volume tenants and confirm active location counts look correct before editing or deleting Building records.
+</Update>
+
+<Update label="May 27, 2026" tags={["Internal","Permissions","Database","Web","Mobile"]} description="Create/edit permission split">
+  Module write permissions were split into explicit create and edit permissions across contracts, server route guards, web, mobile, seed data, and role storage.
+
+  The migration converts old stored write permissions into the new create/edit pair.
+</Update>
+
+<Update label="May 27, 2026" tags={["Internal","Mobile","Media","Support"]} description="Mobile media removal behavior">
+  Mobile attachment removal now disconnects media from the parent record without eagerly soft-deleting the Media row first.
+
+  This avoids validation failures caused by tenant-scoped soft-delete filters. Orphaned media cleanup remains a separate concern.
+</Update>
+
 <Update label="May 24, 2026" tags={["Chat","Roles","Pins"]} description="Department Pin chat membership">
   Department Pin chat membership now uses an explicit role setting separate from department notifications.
 
@@ -298,6 +364,18 @@ Follow this page for major Pin updates, new workflows, and important changes tha
 
 <Update label="May 24, 2026" tags={["Mobile","Locations"]} description="Mobile map selection fix">
   Mobile map taps now resolve the underlying location even when the current-location blue dot captures the tap.
+</Update>
+
+<Update label="May 24, 2026" tags={["Internal","Chat","Roles","Support"]} description="Department Pin chat auto-join">
+  Department Pin chat auto-membership now uses a dedicated `autoJoinDepartmentPinChats` role flag instead of broad department membership or notification preferences.
+
+  User and role changes resync affected Pin chats.
+</Update>
+
+<Update label="May 24, 2026" tags={["Internal","Mobile","Locations","QA"]} description="Mobile map hit testing">
+  Mobile location selection now falls back to Mappedin coordinate lookup when the tap payload does not include a space.
+
+  Regression checks should include tapping directly on the current-location indicator.
 </Update>
 
 <Update label="May 8, 2026" tags={["Help Center"]} description="Help center launched">

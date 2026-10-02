@@ -17,8 +17,7 @@
       {
         "group": "Updates",
         "pages": [
-          "changelog",
-          "internal-changelog"
+          "changelog"
         ]
       },
       {
@@ -103,5 +102,11 @@
   },
   "footer": {
     "socials": {}
-  }
+  },
+  "redirects": [
+    {
+      "source": "/internal-changelog",
+      "destination": "/changelog"
+    }
+  ]
 }
