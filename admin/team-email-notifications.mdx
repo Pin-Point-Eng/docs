@@ -81,6 +81,16 @@ Every notification email includes:
 - A **View Pin** button that links back to the Pin in PIN
 - The Pin PDF, if Attach Pin PDF is enabled
 
+Emails also include **who took the action**, with a **Completed by**, **Cancelled by**, or **Changed by** row (for example, "Jordan Lee completed this Pin").
+
+Depending on the trigger event, the email includes additional detail:
+
+| Event | Extra detail in the email |
+| --- | --- |
+| **Status change** | The old and new status |
+| **Completion** | The completion note and the time spent |
+| **Cancellation** | The reason the Pin was cancelled |
+
 <Info>
   External recipients who click **View Pin** will be prompted to log in. External access to Pin details without an account is on the roadmap.
 </Info>
