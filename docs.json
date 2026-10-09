@@ -64,7 +64,8 @@
           "modules/vendors",
           "modules/procedures",
           "modules/analytics",
-          "modules/tenant-portal"
+          "modules/tenant-portal",
+          "modules/pinny"
         ]
       },
       {
