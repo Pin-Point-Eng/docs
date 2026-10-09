@@ -35,7 +35,8 @@
           "viewing-navigating/index",
           "viewing-navigating/overview-dashboard",
           "viewing-navigating/map-view",
-          "viewing-navigating/list-view-filters-groups"
+          "viewing-navigating/list-view-filters-groups",
+          "viewing-navigating/calendar"
         ]
       },
       {

@@ -76,6 +76,17 @@ Item name, category, unit type, cost per unit, linked [vendor](/modules/vendors)
 - Link an item to a piece of equipment to surface it on the asset page
 - Check linked Pins to see what's being restocked or used in repairs
 
+## Create menu on an Inventory page
+
+Every inventory page on web has a **Create** menu that starts related work with the item already filled in. From an inventory page, use the Create menu to spin up:
+
+- A **Pin** — automatically linked to that inventory item
+- A **Recurring Pin** — same auto-linking, for recurring restocks or audits
+- An **Incident** — related to the item, with its context pre-filled
+- Another **asset** (equipment or inventory) — useful when adding related gear
+
+In every case, the record you're starting from is already attached to whatever you create — no need to go back and link it manually.
+
 ## Linking Inventory to a Pin
 
 Inventory items can be linked to a Pin the same way equipment is. Any user with permission to edit inventory can link items and log usage.
@@ -122,6 +133,10 @@ Each QR code is tied to the specific inventory record it was generated for and a
 **Scanning codes (mobile):**
 
 Tap the QR scanner button at the top of the mobile app's Overview screen to open the camera. Scanning an inventory QR code jumps straight to the item's detail page.
+
+**Scan history:**
+
+Every time someone opens an inventory item from its QR label, the scan is recorded on the item's page under **Scan history** — showing who opened it, how (QR scan, direct link), and when. Useful for tracking stock counts, audits, or any routine where staff are expected to physically check on an item.
 
 ## Exporting Inventory
 
