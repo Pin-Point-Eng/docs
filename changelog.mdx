@@ -8,6 +8,26 @@ rss: true
 
 What's new in Pin, newest first. Entries tagged **Internal** are engineering, support, and operations notes for the Pin team.
 
+<Update label="October 9, 2026" tags={["Notifications","Admin","Permissions","Analytics"]} description="Team email activity and simpler role permissions">
+  ### New
+
+  - Added an **Activity** tab to each [team email rule](/admin/team-email-notifications) that lists every email it sent, with the Pin, who triggered it, the recipients, and whether it was sent, failed, or skipped and why. Open a row to see the email exactly as it was sent.
+  - Added archiving for team email rules: archived rules stop sending but keep their history, and you can restore them later. The rules list has an **Active** / **Archived** switch and a **Last email** column that turns red when the last email failed.
+  - Added a **Users** tab to each role that lists everyone with that role.
+
+  ### Improved
+
+  - Changed role permissions to one row per area with checkboxes side by side, such as View, Create, Edit, and Delete, instead of a switch for each permission.
+  - Changed Executive Overview so people who have it can switch between the **Executive** and **Standard** Overview, and the app remembers their choice.
+  - Changed team email rule pages to show each condition with a count and links to every item, and changed the To and CC fields to an address box with an **Add** button.
+  - Changed the Roles and Audit log settings pages to the same wide card layout as team email notifications.
+
+  ### Fixed
+
+  - Fixed pages not scrolling when the pointer was over a list, such as a team email rule with many conditions.
+  - Fixed admins being unable to turn on Executive Overview for locked roles such as Admin.
+</Update>
+
 <Update label="October 8, 2026" tags={["Pinny","Notifications","Recurring Pins","Equipment"]} description="Bulk changes with Pinny and clearer team emails">
   ### New
 
