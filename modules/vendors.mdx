@@ -91,6 +91,62 @@ A vendor can be linked to as many inventory items and equipment records as you n
 - **Delete** a vendor when you no longer work with them. Any inventory items or equipment linked to that vendor will have their Vendor field cleared — the items themselves aren't affected.
 - **Export** the full Vendors list view to a spreadsheet using the **Export** button at the top right. The export includes all relevant fields for every vendor in the current view.
 
+## Vendor Portal
+
+The Vendor Portal lets you send Pins to a vendor contact and have them work the Pin directly — without giving them a full PIN account. Great for elevator and escalator service companies, HVAC contractors, pest control, and any other external vendor you dispatch work to.
+
+### How it works
+
+A vendor contact is invited to a lightweight portal at **pin.works/vendor-portal**. They sign in with a 6-digit code emailed to them each time. No password and no app to install.
+
+Once signed in, they see a simple list of Pins assigned to them, organized into **Open** and **Resolved** tabs. From any Pin they can:
+
+- Start the Pin, change status, and complete it with resolution details
+- Tick off checklist items as they work
+- Add photos
+- View a static map of the Pin's location on the property
+- Chat with everyone on the Pin — the vendor is a full participant in the Pin chat alongside your team
+
+Each code is **per individual contact**, not per vendor company. A vendor's access expires after **30 days without use** — after that, they need to request a new code to sign back in.
+
+### Inviting a vendor contact
+
+Portal invites are managed from the **Contacts** tab on a vendor profile. For a vendor contact to receive Pins, they must first exist in the vendor's Contacts list.
+
+From the Contacts tab you can:
+
+- **Invite** a specific contact — sends them an email with their 6-digit code
+- **Resend** the invite if they didn't receive it or lost the email
+- **Revoke** access when they no longer need it
+
+Each contact's row shows their current **access status** (invited, active, revoked) and the **last sign-in time**.
+
+Permission to invite, resend, or revoke portal access depends on your role.
+
+### Assigning Pins to a vendor contact
+
+Once a vendor contact has portal access, they appear as an assignee option on any Pin. The assignee picker on both web and mobile has three tabs:
+
+- **Users** — individuals in your organization
+- **Departments** — route to a whole team
+- **Vendors** — vendor contacts with portal access
+
+Pins are assigned to a **specific vendor contact**, not to the vendor company as a whole.
+
+### Spotting vendor-assigned Pins
+
+Pins assigned to a vendor are marked clearly across the platform:
+
+- An **External** badge on the Pin card
+- A **handshake icon** next to the assignee
+- Visible everywhere Pins appear — list view, map view, and exports
+
+The Pin list also includes an **External** filter so you can isolate all vendor-assigned Pins in one view.
+
+### Audit trail
+
+Every portal invite, sign-in, and revocation is recorded in the audit log — giving admins full visibility into who has access, when they used it, and when it was removed.
+
 ## When to use it
 
 - You want one source of truth for who supplies what
